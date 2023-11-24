@@ -17,17 +17,14 @@ module.exports = {
     },
     borderRadius: {
       custom: "2.5rem",
+      full: "9999px",
     },
     extend: {
       colors: {
-        shockingly_green: "#0ae448",
-        lt_green: "#abff84",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        cream: "#FFFCE1",
-        title: "#FFFCE1",
-        body: "var(--background)",
+        body: "hsl(var(--background))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
@@ -78,14 +75,22 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        "profile-picture":
+          "url('https://s3.eu-west-3.amazonaws.com/sembresjero.me/sembresjero-me-main-picture.webp')",
+        "last-project":
+          "url('https://s3.eu-west-3.amazonaws.com/sembresjero.me/projets/guessthesneakers/sembresjero-me-cover-projet-guessthesneakers.webp')",
+        "on-repeat":
+          "url('https://s3.eu-west-3.amazonaws.com/sembresjero.me/sembresjero-me-cover-on-repeat-tame-impala-currents.webp')",
+      },
       fontFamily: {
         instrument_sans: ["var(--custom-font-instrument_sans)"],
         instrument_serif: ["var(--custom-font-instrument_serif)"],
+        nohemi: ["var(--custom-font-nohemi)"],
+        bigger: ["var(--custom-font-bigger)"],
       },
-      backgroundImage: {
-        zartfilmsproduction:
-          "url('https://www.zartfilmsproduction.com/wp-content/uploads/2023/01/zartfilmsproduction-photo-couverture-services.webp')",
-        "footer-texture": "url('/img/footer-texture.png')",
+      boxShadow: {
+        custom: "0 0px 25px -15px",
       },
     },
   },

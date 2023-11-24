@@ -1,36 +1,44 @@
 "use client";
 
+import dayjs from "dayjs";
 import Image from "next/image";
-import { Moon, Sun, Languages } from "lucide-react";
+import { useTranslation } from "@/app/i18n/client";
 
-interface HeaderProps {}
+interface HeaderProps {
+  lng: any;
+}
 
-const Header: React.FC<HeaderProps> = ({}) => {
+const Header: React.FC<HeaderProps> = ({ lng }) => {
+  const { t } = useTranslation(lng, "header");
+
   return (
     <>
-      <header className="bg-cream sticky top-8 w-full shadow-md rounded-custom z-50">
-        <nav className="container mx-auto px-12 py-4">
-          <div className="flex justify-between items-center">
-            <Image
-              src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/sembresjero-me-logo-black.svg"
-              alt="Jérôme Sembres Portfolio - Black Logo"
-              width={36}
-              height={54}
-            />
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-800">
-                Projects
-              </a>
-              <a href="#" className="text-gray-800">
-                About 3
-              </a>
-              <a href="#" className="text-gray-800">
-                Contact
-              </a>
+      <header className="fixed w-full h-[70px] z-50">
+        <nav className="w-full h-full px-8 py-4">
+          <div className="grid grid-cols-2 justify-items-stretch items-center">
+            <div className="justify-self-start flex items-center space-x-8">
+              <Image
+                src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/sembresjero-me-logo.gif"
+                alt="Jérôme Sembres Portfolio - Logo"
+                width={35}
+                height={35}
+              />
+              <div className="flex items-center space-x-8">
+                <a href="#" className="">
+                  {t("first-menu-item")}
+                </a>
+                <a href="#" className="">
+                  {t("second-menu-item")}
+                </a>
+                <a href="#" className="">
+                  {t("third-menu-item")}
+                </a>
+              </div>
             </div>
-            <div className="flex space-x-4">
-              <Sun />
-              <Languages />
+            <div className="justify-self-end flex items-center space-x-4">
+              <div>Available right now</div>
+              <div>•</div>
+              <div>Toulon, France / Worldwide</div>
             </div>
           </div>
         </nav>

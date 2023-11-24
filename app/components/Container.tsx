@@ -9,6 +9,7 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
     <div
       className="
       max-w-screen-2xl
+      h-full
         mx-auto
         xl:px-16 
         md:px-12

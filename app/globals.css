@@ -2,30 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ️⭐️ Brunswick Green - #1D3C34 - hsl(165, 35%, 17%) */
+
+/* ⭐️ Peach - #FFECC2 - hsl(41, 100%, 88%) */
+
+/* ⭐️ Night - #0A0A0A - hsl(0, 0%, 4%) */
+
 @layer base {
   :root {
-    --background: #0e100f;
-    --foreground: #FFFCE1;
+    --background: 165 35% 17%;
+    --foreground: 41 100% 88%;
 
-    --card: 0 0% 100%;
+    --card: 41 100% 88%;
     --card-foreground: 20 14.3% 4.1%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 14.3% 4.1%;
+    --popover: 260 4% 14%;
+    --popover-foreground: 0 0% 88%;
 
-    --primary: #FFFCE1;
-    --primary-foreground: #0e100f;
+    --primary: 41 100% 88%;
+    --primary-foreground: 41 100% 87%;
 
-    --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
+    --secondary: 0 0% 4%;
+    --secondary-foreground: 257 4% 32%;
 
     --muted: 60 4.8% 95.9%;
     --muted-foreground: 25 5.3% 44.7%;
 
-    --accent: 60 4.8% 95.9%;
+    --accent: 165 35% 17%;
     --accent-foreground: 24 9.8% 10%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 167 30% 21%;
     --destructive-foreground: 60 9.1% 97.8%;
 
     --border: 20 5.9% 90%;
@@ -51,7 +57,7 @@
     --secondary: 12 6.5% 15.1%;
     --secondary-foreground: 60 9.1% 97.8%;
 
-    --muted: 12 6.5% 15.1%;
+    --muted: 37 14% 82%;
     --muted-foreground: 24 5.4% 63.9%;
 
     --accent: 12 6.5% 15.1%;
@@ -75,12 +81,29 @@
   }
 }
 
+@layer components {
+  h5 {
+    font-family: var(--custom-font-instrument_serif);
+    margin-right: theme("margin.2");
+  }
+
+  p {
+    margin-bottom: theme("margin.2");
+  }
+  /* ... */
+}
+
 body {
-  color: var(--primary-foreground);
-  background-color: var(--background);
+  color: hsl(var(--accent));
+  background-color: hsl(var(--background));
   font-family: var(--custom-font-instrument_serif);
-  font-size: 1.5rem; /* 24px */
-  line-height: 2rem; /* 32px */
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+a {
+  color: hsl(var(--));
 }
 
 h1,
@@ -89,5 +112,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--custom-font-instrument_sans);
+  font-family: var(--custom-font-nohemi);
+  color: hsl(var(--accent));
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
 }
