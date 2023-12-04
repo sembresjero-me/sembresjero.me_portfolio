@@ -1,8 +1,8 @@
 {
   "header-menu-first-item": "Projects",
-  "header-menu-first-item-hover": "~ Projects",
+  "header-menu-first-item-hover": "~ \b Projects",
   "header-menu-second-item": "About",
-  "header-menu-second-item-hover": "~ About",
+  "header-menu-second-item-hover": "~ \b About",
   "header-menu-third-item": "Contact",
   "header-custom-text": "Available right now \b \b ~ \b \b  Toulon, France / Worldwide"
 }

@@ -9,7 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        text: "text-accent relative no-underline opacity-70 hover:opacity-100 hover:after:cursor-pointer hover:after:scale-x-100 after:opacity-70 hover:after:opacity-100 after:scale-x-0 after:cursor-pointer after:content-[''] after:absolute after:w-full after:h-0.5 after:bottom-1 after:left-0 after:bg-accent after:origin-bottom-left after:transition-transform after:duration-500 after:ease-out",
+        text: "text-primary relative no-underline opacity-70 hover:opacity-100 hover:after:cursor-pointer hover:after:scale-x-100 after:opacity-70 hover:after:opacity-100 after:scale-x-0 after:cursor-pointer after:content-[''] after:absolute after:w-full after:h-0.5 after:bottom-0.5 after:left-0 after:bg-accent after:origin-bottom-left after:transition-transform after:duration-500 after:ease-out",
         default: "bg-primary rounded-full text-secondary hover:bg-primary/70",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",

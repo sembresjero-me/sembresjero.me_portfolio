@@ -159,8 +159,8 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                   <p className="grow">{t("stack-first-item")}</p>
                   <Image
                     src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-react.svg"
-                    width={30}
-                    height={30}
+                    width={20}
+                    height={20}
                     alt={`Jérôme Sembres Portfolio | ${t(
                       "stack-first-item"
                     )} Logo`}
@@ -170,8 +170,8 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                   <p className="grow">{t("stack-second-item")}</p>
                   <Image
                     src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-next-js.svg"
-                    width={30}
-                    height={30}
+                    width={20}
+                    height={20}
                     alt={`Jérôme Sembres Portfolio | ${t(
                       "stack-second-item"
                     )} Logo`}
@@ -181,8 +181,8 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                   <p className="grow">{t("stack-third-item")}</p>
                   <Image
                     src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-tailwind.svg"
-                    width={30}
-                    height={30}
+                    width={20}
+                    height={20}
                     alt={`Jérôme Sembres Portfolio | ${t(
                       "stack-third-item"
                     )} Logo`}
@@ -192,8 +192,8 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                   <p className="grow">{t("stack-fourth-item")}</p>
                   <Image
                     src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-mongodb.svg"
-                    width={30}
-                    height={30}
+                    width={20}
+                    height={20}
                     alt={`Jérôme Sembres Portfolio | ${t(
                       "stack-fourth-item"
                     )} Logo`}
@@ -203,8 +203,8 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                   <p className="grow">{t("stack-fifth-item")}</p>
                   <Image
                     src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-express-js.svg"
-                    width={30}
-                    height={30}
+                    width={20}
+                    height={20}
                     alt={`Jérôme Sembres Portfolio | ${t(
                       "stack-fifth-item"
                     )} Logo`}

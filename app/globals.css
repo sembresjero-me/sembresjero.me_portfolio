@@ -104,6 +104,7 @@
 
   a {
     color: hsl(var(--secondary));
+    cursor: pointer;
   }
 
   body {

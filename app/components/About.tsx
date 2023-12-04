@@ -64,7 +64,7 @@ const About: React.FC<AboutProps> = ({ lng }) => {
                       location={t("work-experiences-fourth-item-location")}
                     />
                   </div>
-                  <p className="self-end text-accent">
+                  <p className="self-end">
                     {t("work-experiences-asterisk")}
                   </p>
                 </div>
@@ -220,7 +220,7 @@ const About: React.FC<AboutProps> = ({ lng }) => {
                         )}
                       />
                     </div>
-                    <p className="self-end text-accent">
+                    <p className="self-end">
                       {t("educations-certifications-asterisk")}
                     </p>
                   </div>
