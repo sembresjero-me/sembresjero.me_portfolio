@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslation } from "@/app/i18n/client";
 
 interface FooterProps {
@@ -8,7 +7,7 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ lng }) => {
-  const { t } = useTranslation(lng, "header");
+  const { t } = useTranslation(lng, "footer");
 
   return (
     <>

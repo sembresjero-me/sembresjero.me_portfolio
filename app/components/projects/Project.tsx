@@ -50,10 +50,10 @@ const Project: React.FC<ProjectProps> = ({
         ></video>
         <div className="absolute p-8 w-full h-full flex items-end">
           <div>
-            <h3 className="text-primary text-2xl 2xl:text-3xl leading-tight uppercase mb-2">
+            <h3 className="text-secondary text-2xl 2xl:text-3xl leading-tight uppercase mb-2">
               {title}
             </h3>
-            <p>{description}</p>
+            <p className="text-secondary">{description}</p>
           </div>
         </div>
       </div>

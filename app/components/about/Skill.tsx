@@ -25,9 +25,9 @@ const Skill: React.FC<SkillProps> = ({ id, title, imageLink }) => {
       <div
         className={`w-full flex ${paddingClass} items-center ${borderClasses} `}
       >
-        <h3 className="font-instrument_serif text-xl text-accent grow">
+        <p className="grow">
           {title}
-        </h3>
+        </p>
         <Image
           src={imageLink}
           width={25}

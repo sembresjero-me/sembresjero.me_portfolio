@@ -13,14 +13,13 @@ const WebDevelopmentSkill: React.FC<WebDevelopmentSkillProps> = ({
 }) => {
   return (
     <>
-      <div className="w-full flex items-center">
+      <div className="w-full flex items-center mb-0.5">
         <p className="me-2">{title}</p>
         <Image
           src={imageLink}
           width={20}
           height={20}
           alt={`Jérôme Sembres Portfolio | ${title} Logo`}
-          className="mb-2"
         />
       </div>
     </>

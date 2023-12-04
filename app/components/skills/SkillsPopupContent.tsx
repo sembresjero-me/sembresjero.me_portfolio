@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslation } from "@/app/i18n/client";
 
 import WebDevelopmentSkill from "@/app/components/skills/WebDevelopmentSkill";
@@ -15,12 +14,12 @@ const Skills: React.FC<SkillsProps> = ({ lng }) => {
   return (
     <>
       <div className="grow flex flex-col">
-        <h3 className="text-accent text-2xl underline underline-offset-4 mb-4">
+        <h3 className="text-2xl underline underline-offset-4">
           {t("skills-web-development-title")}
         </h3>
-        <div className="grid grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-3 gap-8 mb-16">
           <div className="w-full">
-            <h4 className="text-accent text-xl italic mb-2">
+            <h4 className="text-xl">
               {t("skills-web-development-front-end-title")}
             </h4>
             <WebDevelopmentSkill
@@ -37,7 +36,7 @@ const Skills: React.FC<SkillsProps> = ({ lng }) => {
             />
           </div>
           <div className="w-full">
-            <h4 className="text-accent text-xl italic mb-2">
+            <h4 className="text-xl">
               {t("skills-web-development-back-end-title")}
             </h4>
             <WebDevelopmentSkill
@@ -54,17 +53,11 @@ const Skills: React.FC<SkillsProps> = ({ lng }) => {
             />
             <WebDevelopmentSkill
               title={t("skills-web-development-back-end-fourth-item")}
-              imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-aws.svg"
-            />
-            <WebDevelopmentSkill
-              title={t("skills-web-development-back-end-fifth-item")}
               imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-vercel.svg"
             />
           </div>
           <div className="w-full">
-            <h4 className="text-accent text-xl italic mb-2">
-              {t("skills-web-development-cms-title")}
-            </h4>
+            <h4 className="text-xl">{t("skills-web-development-cms-title")}</h4>
             <WebDevelopmentSkill
               title={t("skills-web-development-cms-first-item")}
               imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-wordpress.svg"
@@ -90,24 +83,24 @@ const Skills: React.FC<SkillsProps> = ({ lng }) => {
             </h3>
             <div className="grid grid-cols-2 gap-8">
               <div className="w-full">
-                <h4 className="text-accent text-xl italic mb-2">
+                <h4 className="text-xl">
                   {t("skills-others-marketing-title")}
                 </h4>
                 <p>{t("skills-others-marketing-first-item")}</p>
-                <p>Teamwork</p>
-                <p>Adaptability</p>
-                <p>Creativity</p>
-                <p>Initiative</p>
+                <p>{t("skills-others-marketing-second-item")}</p>
+                <p>{t("skills-others-marketing-third-item")}</p>
+                <p>{t("skills-others-marketing-fourth-item")}</p>
+                <p>{t("skills-others-marketing-fifth-item")}</p>
               </div>
               <div className="w-full">
-                <h4 className="text-accent text-xl italic mb-2">
+                <h4 className="text-xl">
                   {t("skills-others-project-management-title")}
                 </h4>
-                <p>Communication</p>
-                <p>Teamwork</p>
-                <p>Adaptability</p>
-                <p>Creativity</p>
-                <p>Initiative</p>
+                <p>{t("skills-others-project-management-first-item")}</p>
+                <p>{t("skills-others-project-management-second-item")}</p>
+                <p>{t("skills-others-project-management-third-item")}</p>
+                <p>{t("skills-others-project-management-fourth-item")}</p>
+                <p>{t("skills-others-project-management-fifth-item")}</p>
               </div>
             </div>
           </div>

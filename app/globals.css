@@ -19,16 +19,16 @@
     --popover: 260 4% 14%;
     --popover-foreground: 0 0% 88%;
 
-    --primary: 41 100% 88%;
+    --primary: 165 35% 17%;
     --primary-foreground: 41 100% 87%;
 
-    --secondary: 0 0% 4%;
+    --secondary: 41 100% 88%;
     --secondary-foreground: 257 4% 32%;
 
     --muted: 60 4.8% 95.9%;
     --muted-foreground: 25 5.3% 44.7%;
 
-    --accent: 165 35% 17%;
+    --accent: 0 0% 4%;
     --accent-foreground: 24 9.8% 10%;
 
     --destructive: 167 30% 21%;
@@ -82,42 +82,36 @@
 }
 
 @layer components {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--custom-font-nohemi);
+    font-weight: theme("fontWeight.medium");
+    color: hsl(var(--primary));
+    margin-bottom: theme("margin.4");
+  }
+
+  h4 {
+    font-family: var(--custom-font-nohemi);
+    color: hsl(var(--primary));
+    margin-bottom: theme("margin.2");
+  }
+  
   h5 {
     font-family: var(--custom-font-instrument_serif);
     margin-right: theme("margin.2");
   }
 
-  p {
-    margin-bottom: theme("margin.2");
+  a {
+    color: hsl(var(--secondary));
   }
+
+  body {
+    color: hsl(var(--primary));
+    background-color: hsl(var(--background));
+    font-family: var(--custom-font-instrument_serif);
+    font-size: theme("fontSize.xl");
+  }
+
   /* ... */
-}
-
-body {
-  color: hsl(var(--accent));
-  background-color: hsl(var(--background));
-  font-family: var(--custom-font-instrument_serif);
-  font-weight: 300;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-a {
-  color: hsl(var(--));
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--custom-font-nohemi);
-  color: hsl(var(--accent));
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 500;
 }

@@ -18,7 +18,7 @@ const EducationCertification: React.FC<EducationCertificationProps> = ({
   if (id === 1) {
     paddingClass = "pb-3";
     borderClasses = "border-b-2 border-accent/70";
-  } else if (id === 5) {
+  } else if (id === 4) {
     paddingClass = "pt-3";
   } else {
     paddingClass = "py-3";
@@ -27,15 +27,13 @@ const EducationCertification: React.FC<EducationCertificationProps> = ({
   return (
     <>
       <div
-        className={`w-full grid grid-cols-12 gap-4 ${paddingClass} justify-items-stretch items-center ${borderClasses} `}
+        className={`w-full grid grid-cols-12 gap-8 ${paddingClass} justify-items-stretch items-center ${borderClasses} `}
       >
-        <h3 className="col-span-6 justify-self-start font-instrument_serif text-xl text-accent grow">
-          {title}
-        </h3>
-        <p className="col-span-2 justify-self-center text-accent italic pe-8">
+        <p className="col-span-6 justify-self-start grow">{title}</p>
+        <p className="col-span-2 justify-self-center italic">
           {date}
         </p>
-        <p className="col-span-4 justify-self-end text-accent">{location}</p>
+        <p className="col-span-4 justify-self-end">{location}</p>
       </div>
     </>
   );

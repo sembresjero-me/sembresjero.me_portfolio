@@ -89,6 +89,26 @@ module.exports = {
         nohemi: ["var(--custom-font-nohemi)"],
         bigger: ["var(--custom-font-bigger)"],
       },
+      fontSize: {
+        "lg": [
+          "1.125rem",
+          {
+            lineHeight: "1.5rem",
+          },
+        ],
+        "4xl": [
+          "2.25rem",
+          {
+            lineHeight: "2.75rem",
+          },
+        ],
+        "8xl": [
+          "6rem",
+          {
+            lineHeight: "1.1",
+          },
+        ],
+      },
       boxShadow: {
         custom: "0 0px 25px -15px",
       },

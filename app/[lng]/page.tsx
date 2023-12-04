@@ -1,15 +1,15 @@
-import Home from "@/app/components/Home";
+import Bento from "@/app/components/Bento";
 
-interface HomePageProps {
+interface BentoPageProps {
   params: { lng: string };
 }
 
-const HomePage: React.FC<HomePageProps> = async ({ params: { lng } }) => {
+const BentoPage: React.FC<BentoPageProps> = async ({ params: { lng } }) => {
   return (
     <>
-      <Home lng={lng} />
+      <Bento lng={lng} />
     </>
   );
 };
 
-export default HomePage;
+export default BentoPage;

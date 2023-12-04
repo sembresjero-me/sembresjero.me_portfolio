@@ -23,10 +23,10 @@ const Language: React.FC<LanguageProps> = ({ id, title, level }) => {
       <div
         className={`w-full flex ${paddingClass} items-center ${borderClasses} `}
       >
-        <h3 className="font-instrument_serif text-xl text-accent grow">
+        <p className="grow">
           {title}
-        </h3>
-        <p className="text-accent">{level}</p>
+        </p>
+        <p>{level}</p>
       </div>
     </>
   );

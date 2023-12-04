@@ -1,6 +1,8 @@
 {
+  "intro-block-title": "Yes,\n\nJérôme,\n\ni\u2019ts me.",
+  "intro-block-button": "~ ♫♫♫",
   "presentation-block-title": "I\u2019m a fullstack web developer, with a front-end focus, currently freelancing in the South East of France. Also, i'm a real music enthusiast!",
-  "presentation-block-button": "More about me",
+  "presentation-block-button": "~ More about me",
   "stack-block-title": "Favourite stack",
   "stack-first-item": "React",
   "stack-second-item": "Next.js",
@@ -9,6 +11,6 @@
   "stack-fifth-item": "Express.js",
   "music-block-title": "On repeat",
   "last-project-block-title": "My last project",
-  "last-project-block-button": "See all",
+  "last-project-block-button": "~ See all",
   "last-project-title": "GUESS THE SNEAKERS"
 }

@@ -1,7 +1,7 @@
 "use client";
 
-import dayjs from "dayjs";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useTranslation } from "@/app/i18n/client";
 
 interface HeaderProps {
@@ -10,6 +10,9 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ lng }) => {
   const { t } = useTranslation(lng, "header");
+  const pathname = usePathname();
+
+  console.log("pathname : ", pathname);
 
   return (
     <>
@@ -23,23 +26,25 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                 width={35}
                 height={35}
               />
-              <div className="flex items-center space-x-8">
+              <div className="flex items-center space-x-12">
                 <a href="#" className="">
-                  {t("first-menu-item")}
+                  {pathname.includes("projects")
+                    ? t("header-menu-first-item-hover")
+                    : t("header-menu-first-item")}
                 </a>
                 <a href="#" className="">
-                  {t("second-menu-item")}
+                  {pathname.includes("about")
+                    ? t("header-menu-second-item-hover")
+                    : t("header-menu-second-item")}
                 </a>
                 <a href="#" className="">
-                  {t("third-menu-item")}
+                  {t("header-menu-third-item")}
                 </a>
               </div>
             </div>
-            <div className="justify-self-end flex items-center space-x-4">
-              <div>Available right now</div>
-              <div>•</div>
-              <div>Toulon, France / Worldwide</div>
-            </div>
+            <p className="justify-self-end text-secondary">
+              {t("header-custom-text")}
+            </p>
           </div>
         </nav>
       </header>

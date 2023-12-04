@@ -24,18 +24,25 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
       <div className="h-full flex items-center">
         <div className="grid grid-cols-12 grid-rows-2 gap-4 justify-items-center items-center w-full h-[70vh]">
           <div className="col-span-5 row-span-1 bg-card p-8 rounded-lg border border-secondary w-full h-full shadow-custom shadow-primary">
-            <h3 className="text-8xl text-accent">
-              Yes,
-              <br />
-              it's me,
-              <br />
-              Jérôme.
-            </h3>
+            <div className="flex flex-col justify-items-stretch items-stretch w-full h-full">
+              <h1 className="text-8xl grow">{t("intro-block-title")}</h1>
+              <Button
+                variant="text"
+                className="link link--metis justify-self-end self-end"
+                onClick={() => {
+                  router.push(
+                    "https://youtu.be/96z1N042z20?si=DKMCMCk0Frr57pnL"
+                  );
+                }}
+              >
+                {t("intro-block-button")}
+              </Button>
+            </div>
           </div>
           <div className="col-span-3 col-start-6 row-span-1 bg-profile-picture bg-center bg-cover p-8 shadow-custom shadow-primary rounded-lg aspect-square w-full h-full"></div>
           <div className="col-span-4 col-start-9 row-span-1 bg-card p-8 rounded-lg border border-secondary w-full h-full">
-            <div className="flex flex-col justify-items-stretch items-stretch h-full">
-              <p className="grow justify-self-start self-start text-accent text-xl 2xl:text-4xl">
+            <div className="flex flex-col justify-items-stretch items-stretch w-full h-full">
+              <p className="grow justify-self-start self-start text-xl 2xl:text-4xl">
                 {t("presentation-block-title")}
               </p>
               <Button
@@ -51,9 +58,9 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
           </div>
           <div className="col-span-3 bg-card p-8 rounded-lg border border-secondary w-full h-full shadow-custom shadow-primary">
             <div className="flex flex-col h-full">
-              <h3 className="justify-self-start self-start text-accent text-xl 2xl:text-3xl mb-4">
+              <h2 className="w-full justify-self-start self-start text-xl 2xl:text-3xl">
                 {t("music-block-title")}
-              </h3>
+              </h2>
               <Popover>
                 <PopoverTrigger className="grow">
                   <div className="grow bg-on-repeat bg-center bg-cover p-8 rounded-lg w-full h-full"></div>
@@ -144,14 +151,12 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
           </div>
           <div className="col-span-4 col-start-4 bg-card p-8 rounded-lg border border-secondary w-full h-full shadow-custom shadow-primary">
             <div className="flex flex-col items-center w-full h-full">
-              <h2 className="w-full text-accent text-xl 2xl:text-3xl mb-4">
+              <h2 className="w-full text-xl 2xl:text-3xl">
                 {t("stack-block-title")}
               </h2>
               <div className="grow flex flex-col w-full h-full">
                 <div className="w-full flex pb-4 items-center border-b-2 border-accent/70">
-                  <h3 className="font-instrument_serif text-2xl text-accent grow">
-                    {t("stack-first-item")}
-                  </h3>
+                  <p className="grow">{t("stack-first-item")}</p>
                   <Image
                     src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-react.svg"
                     width={30}
@@ -161,10 +166,8 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                     )} Logo`}
                   />
                 </div>
-                <div className="w-full flex py-4 items-center border-b-2 border-accent/70 shadow-custom shadow-primary">
-                  <h3 className="font-instrument_serif text-2xl text-accent grow">
-                    {t("stack-second-item")}
-                  </h3>
+                <div className="w-full flex py-4 items-center border-b-2 border-accent/70">
+                  <p className="grow">{t("stack-second-item")}</p>
                   <Image
                     src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-next-js.svg"
                     width={30}
@@ -174,10 +177,8 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                     )} Logo`}
                   />
                 </div>
-                <div className="w-full flex py-4 items-center border-b-2 border-accent/70 shadow-custom shadow-primary">
-                  <h3 className="font-instrument_serif text-2xl text-accent grow">
-                    {t("stack-third-item")}
-                  </h3>
+                <div className="w-full flex py-4 items-center border-b-2 border-accent/70">
+                  <p className="grow">{t("stack-third-item")}</p>
                   <Image
                     src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-tailwind.svg"
                     width={30}
@@ -187,10 +188,8 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                     )} Logo`}
                   />
                 </div>
-                <div className="w-full flex py-4 items-center border-b-2 border-accent/70 shadow-custom shadow-primary">
-                  <h3 className="font-instrument_serif text-2xl text-accent grow">
-                    {t("stack-fourth-item")}
-                  </h3>
+                <div className="w-full flex py-4 items-center border-b-2 border-accent/70">
+                  <p className="grow">{t("stack-fourth-item")}</p>
                   <Image
                     src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-mongodb.svg"
                     width={30}
@@ -201,9 +200,7 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                   />
                 </div>
                 <div className="w-full flex pt-4 items-center">
-                  <h3 className="font-instrument_serif text-2xl text-accent grow">
-                    {t("stack-fifth-item")}
-                  </h3>
+                  <p className="grow">{t("stack-fifth-item")}</p>
                   <Image
                     src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-express-js.svg"
                     width={30}
@@ -218,10 +215,10 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
           </div>
           <div className="col-span-5 col-start-8 bg-card p-8 rounded-lg border border-secondary w-full h-full">
             <div className="flex flex-col h-full">
-              <div className="flex content-center mb-4">
-                <h3 className="grow justify-self-start self-start text-accent text-xl 2xl:text-3xl">
+              <div className="flex mb-4">
+                <h2 className="grow justify-self-start self-start mb-0 text-xl 2xl:text-3xl">
                   {t("last-project-block-title")}
-                </h3>
+                </h2>
                 <Button
                   variant="text"
                   className="justify-self-end self-end"
@@ -239,9 +236,9 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                   alt="Jérôme Sembres portfolio - Last project"
                 />
                 <div className="absolute group-hover:cursor-pointer flex p-8 items-end h-full">
-                  <h4 className="text-2xl text-foreground">
+                  <h3 className="text-2xl text-secondary mb-0">
                     {t("last-project-title")}
-                  </h4>
+                  </h3>
                 </div>
               </div>
             </div>
