@@ -20,6 +20,8 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
   const pathname = usePathname();
   const router = useRouter();
 
+  console.log("pathname", pathname);
+
   return (
     <>
       <header className="fixed top-0 w-full h-[70px] z-50">
@@ -32,9 +34,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                 width={35}
                 height={35}
                 onClick={() => {
-                  pathname.includes("/en/")
-                    ? router.push(`/${lng}`)
-                    : router.push("#");
+                  router.push(`/${lng}`);
                 }}
               />
               <div className="flex items-center space-x-12">
@@ -98,7 +98,9 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                     <div
                       className="w-full flex justify-center items-center my-1"
                       onClick={() => {
-                        router.push("https://www.instagram.com/sembresjero.me/");
+                        router.push(
+                          "https://www.instagram.com/sembresjero.me/"
+                        );
                       }}
                     >
                       <p className="me-2">@sembresjero.me</p>
@@ -112,9 +114,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                     <div
                       className="w-full flex justify-center items-center my-1"
                       onClick={() => {
-                        router.push(
-                          "https://read.cv/sembresjerome/"
-                        );
+                        router.push("https://read.cv/sembresjerome/");
                       }}
                     >
                       <p className="me-2">@sembresjerome</p>

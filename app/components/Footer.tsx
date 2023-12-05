@@ -18,10 +18,6 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
   const params = useParams();
   const router = useRouter();
 
-  console.log("englishUrl", englishUrl);
-  console.log("frenchUrl", frenchUrl);
-  console.log("pathname", pathname);
-
   useEffect(() => {
     if (params.lng === "en") {
       setEnglishUrl(pathname);
@@ -32,7 +28,7 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
       const currentUrlInEnglish = pathname.replace(/fr/i, "en");
       setEnglishUrl(currentUrlInEnglish);
     }
-  }, []);
+  }, [pathname]);
 
   return (
     <>
