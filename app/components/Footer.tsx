@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
@@ -19,14 +18,18 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
   const params = useParams();
   const router = useRouter();
 
+  console.log("englishUrl", englishUrl);
+  console.log("frenchUrl", frenchUrl);
+  console.log("pathname", pathname);
+
   useEffect(() => {
     if (params.lng === "en") {
       setEnglishUrl(pathname);
-      const currentUrlInFrench = pathname.replace("/en", "/fr");
+      const currentUrlInFrench = pathname.replace(/en/i, "fr");
       setFrenchUrl(currentUrlInFrench);
     } else {
       setFrenchUrl(pathname);
-      const currentUrlInEnglish = pathname.replace("/fr", "/en");
+      const currentUrlInEnglish = pathname.replace(/fr/i, "en");
       setEnglishUrl(currentUrlInEnglish);
     }
   }, []);
