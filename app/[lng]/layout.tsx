@@ -90,7 +90,7 @@ export default async function RootLayout({
   return (
     <html lang={lng} dir={dir(lng)}>
       <body
-        className={`h-screen ${instrumentSerif.variable} ${nohemi.variable} `}
+        className={`${instrumentSerif.variable} ${nohemi.variable} `}
       >
         <ClientOnly>
           <Header lng={lng} />

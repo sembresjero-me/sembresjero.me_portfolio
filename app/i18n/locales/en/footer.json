@@ -1,7 +1,10 @@
 {
-  "footer-menu-first-item": "Legal Notice",
-  "footer-menu-first-item-hover": "~ \b Legal Notice",
-  "footer-menu-second-item": "Privacy Policy",
-  "footer-menu-second-item-hover": "~ \b Privacy Policy",
-  "footer-menu-third-item": "Contact"
+  "footer-menu-legal-notice-item": "Legal Notice",
+  "footer-menu-legal-notice-item-active": "~ \b Legal Notice",
+  "footer-menu-privacy-policy-item": "Privacy Policy",
+  "footer-menu-privacy-policy-item-active": "~ \b Privacy Policy",
+  "footer-menu-language-switcher-english-item": "EN",
+  "footer-menu-language-switcher-english-item-active": "~ EN",
+  "footer-menu-language-switcher-french-item": "FR",
+  "footer-menu-language-switcher-french-item-active": "~ FR"
 }
