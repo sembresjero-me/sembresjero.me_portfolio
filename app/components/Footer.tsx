@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { usePageTransition } from '@/app/hooks/usePageTransition';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import { useParams } from 'next/navigation';
@@ -8,16 +9,16 @@ import { useTranslation } from '@/app/i18n/client';
 
 interface FooterProps {
   lng: any;
-  counter: () => void;
 }
 
-const Footer: React.FC<FooterProps> = ({ lng, counter }) => {
+const Footer: React.FC<FooterProps> = ({ lng }) => {
   const { t } = useTranslation(lng, 'footer');
   const [englishUrl, setEnglishUrl] = useState<string>('');
   const [frenchUrl, setFrenchUrl] = useState<string>('');
   const pathname = usePathname();
   const params = useParams();
   const router = useRouter();
+  const { count, setCount } = usePageTransition();
 
   useEffect(() => {
     if (params.lng === 'en') {
@@ -40,12 +41,12 @@ const Footer: React.FC<FooterProps> = ({ lng, counter }) => {
               <a
                 onClick={() => {
                   if (pathname.includes('/legal-notice')) {
-                    counter();
+                    setCount(count + 1);
                     setTimeout(() => {
                       router.push('#');
                     }, 500);
                   } else {
-                    counter();
+                    setCount(count + 1);
                     setTimeout(() => {
                       router.push(`/${lng}/legal-notice`);
                     }, 500);
@@ -59,12 +60,12 @@ const Footer: React.FC<FooterProps> = ({ lng, counter }) => {
               <a
                 onClick={() => {
                   if (pathname.includes('/privacy-policy')) {
-                    counter();
+                    setCount(count + 1);
                     setTimeout(() => {
                       router.push('#');
                     }, 500);
                   } else {
-                    counter();
+                    setCount(count + 1);
                     setTimeout(() => {
                       router.push(`/${lng}/privacy-policy`);
                     }, 500);
@@ -78,12 +79,12 @@ const Footer: React.FC<FooterProps> = ({ lng, counter }) => {
               <a
                 onClick={() => {
                   if (pathname.includes('/en')) {
-                    counter();
+                    setCount(count + 1);
                     setTimeout(() => {
                       router.push(frenchUrl);
                     }, 500);
                   } else {
-                    counter();
+                    setCount(count + 1);
                     setTimeout(() => {
                       router.push(englishUrl);
                     }, 500);

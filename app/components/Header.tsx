@@ -1,6 +1,7 @@
 'use client';
 
 import { Popover, PopoverContent, PopoverTrigger } from '@/app/components/ui/popover';
+import { usePageTransition } from '@/app/hooks/usePageTransition';
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -9,13 +10,13 @@ import { useTranslation } from '@/app/i18n/client';
 
 interface HeaderProps {
   lng: any;
-  counter: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ lng, counter }) => {
+const Header: React.FC<HeaderProps> = ({ lng }) => {
   const { t } = useTranslation(lng, 'header');
   const pathname = usePathname();
   const router = useRouter();
+  const { count, setCount } = usePageTransition();
 
   return (
     <>
@@ -29,19 +30,22 @@ const Header: React.FC<HeaderProps> = ({ lng, counter }) => {
                 width={35}
                 height={35}
                 onClick={() => {
-                  router.push(`/${lng}`);
+                  setCount(count + 1);
+                  setTimeout(() => {
+                    router.push(`/${lng}`);
+                  }, 500);
                 }}
               />
               <div className="flex items-center space-x-12">
                 <a
                   onClick={() => {
                     if (pathname.includes('/projects')) {
-                      counter();
+                      setCount(count + 1);
                       setTimeout(() => {
                         router.push('#');
                       }, 500);
                     } else {
-                      counter();
+                      setCount(count + 1);
                       setTimeout(() => {
                         router.push(`/${lng}/projects`);
                       }, 500);
@@ -55,12 +59,12 @@ const Header: React.FC<HeaderProps> = ({ lng, counter }) => {
                 <a
                   onClick={() => {
                     if (pathname.includes('/about')) {
-                      counter();
+                      setCount(count + 1);
                       setTimeout(() => {
                         router.push('#');
                       }, 500);
                     } else {
-                      counter();
+                      setCount(count + 1);
                       setTimeout(() => {
                         router.push(`/${lng}/about`);
                       }, 500);

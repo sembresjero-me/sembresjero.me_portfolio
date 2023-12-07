@@ -1,12 +1,12 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
 import Image from 'next/image';
 
-import Container from './Container';
-import Footer from './Footer';
-import Header from './Header';
+import { usePageTransition } from '@/app/hooks/usePageTransition';
+import Container from '@/app/components/Container';
+import Footer from '@/app/components/Footer';
+import Header from '@/app/components/Header';
 
 import '@/app/globals.css';
 
@@ -16,17 +16,13 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = ({ children, lng }) => {
-  const [transitionCount, setTransitionCount] = useState<number>(0);
-
-  function pageTransitionHandler() {
-    setTransitionCount(transitionCount + 1);
-  }
+  const { count } = usePageTransition();
 
   return (
     <>
       <AnimatePresence mode="wait" initial={false}>
-        <motion.div key={transitionCount}>
-          <Header lng={lng} counter={pageTransitionHandler} />
+        <motion.div key={count}>
+          <Header lng={lng} />
           <Image
             src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/sembresjero-me-typo.svg"
             alt="Jérôme Sembres Portfolio - Typo"
@@ -35,7 +31,7 @@ const App: React.FC<AppProps> = ({ children, lng }) => {
             className="fixed bottom-8 left-8"
           />
           <Container>{children}</Container>
-          <Footer lng={lng} counter={pageTransitionHandler} />
+          <Footer lng={lng} />
           <motion.div
             className="slide-in"
             animate={{ height: '0vh' }}
