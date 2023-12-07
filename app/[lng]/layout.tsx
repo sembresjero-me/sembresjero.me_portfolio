@@ -1,14 +1,11 @@
 import { dir } from "i18next";
 import { languages } from "@/app/i18n/settings";
 import ClientOnly from "@/app/components/ClientOnly";
-import Container from "@/app/components/Container";
-import Header from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
-import Image from "next/image";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
 import { Instrument_Serif } from "next/font/google";
 import "@/app/globals.css";
+import App from "@/app/components/App";
 
 const instrumentSerif = Instrument_Serif({
   weight: ["400"],
@@ -89,20 +86,9 @@ export default async function RootLayout({
 }) {
   return (
     <html lang={lng} dir={dir(lng)}>
-      <body
-        className={`${instrumentSerif.variable} ${nohemi.variable} `}
-      >
+      <body className={`${instrumentSerif.variable} ${nohemi.variable} `}>
         <ClientOnly>
-          <Header lng={lng} />
-          <Image
-            src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/sembresjero-me-typo.svg"
-            alt="Jérôme Sembres Portfolio - Typo"
-            width={30}
-            height={123}
-            className="fixed bottom-8 left-8"
-          />
-          <Container>{children}</Container>
-          <Footer lng={lng} />
+          <App lng={lng} children={children} />
         </ClientOnly>
       </body>
     </html>
