@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 interface ProjectProps {
   title: string;
@@ -9,19 +9,14 @@ interface ProjectProps {
   videoLink: string;
 }
 
-const Project: React.FC<ProjectProps> = ({
-  title,
-  description,
-  imageLink,
-  videoLink,
-}) => {
+const Project: React.FC<ProjectProps> = ({ title, description, imageLink, videoLink }) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
     <>
       <div
         key={title}
-        className="relative bg-cream rounded-lg w-full aspect-[3/2]"
+        className="bg-cream relative aspect-[3/2] w-full rounded-lg"
         onMouseEnter={() => {
           setIsHovered(true);
         }}
@@ -31,7 +26,7 @@ const Project: React.FC<ProjectProps> = ({
       >
         <img
           src={imageLink}
-          className={`absolute w-full h-full object-cover rounded-lg transition`}
+          className={`absolute h-full w-full rounded-lg object-cover transition`}
           alt={`Jérôme Sembres portfolio - ${title} project`}
         />
         <video
@@ -45,15 +40,15 @@ const Project: React.FC<ProjectProps> = ({
           height="100%"
           src={videoLink}
           className={`${
-            isHovered ? "block" : "hidden"
-          } absolute w-full h-full object-cover rounded-lg`}
+            isHovered ? 'block' : 'hidden'
+          } absolute h-full w-full rounded-lg object-cover`}
         ></video>
-        <div className="absolute p-8 w-full h-full flex items-end">
+        <div className="absolute flex h-full w-full items-end p-8">
           <div>
-            <h3 className="text-secondary text-2xl 2xl:text-3xl leading-tight uppercase mb-2">
+            <h3 className="mb-2 text-2xl uppercase text-secondary md:text-3xl lg:text-2xl xl:text-3xl">
               {title}
             </h3>
-            <p className="text-secondary">{description}</p>
+            <p className="text-lg text-secondary md:text-xl lg:text-lg xl:text-xl">{description}</p>
           </div>
         </div>
       </div>

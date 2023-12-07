@@ -26,7 +26,11 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
               <div className="flex h-full w-full flex-col items-stretch justify-items-stretch">
                 <h1 className="grow text-8xl">{t('intro-block-title')}</h1>
                 <Button variant="text" className="link link--metis self-end justify-self-end">
-                  <a href="https://youtu.be/96z1N042z20?si=DKMCMCk0Frr57pnL" target="_blank">
+                  <a
+                    href="https://youtu.be/96z1N042z20?si=DKMCMCk0Frr57pnL"
+                    className="text-primary"
+                    target="_blank"
+                  >
                     {t('intro-block-button')}
                   </a>
                 </Button>

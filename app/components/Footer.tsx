@@ -35,7 +35,7 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
   return (
     <>
       <footer className="fixed bottom-0 z-50 hidden h-[70px] w-full lg:block">
-        <nav className="h-full w-full px-8 py-4">
+        <nav className="h-full w-full p-4">
           <div className="flex items-center justify-end">
             <div className="flex items-center space-x-12">
               <a

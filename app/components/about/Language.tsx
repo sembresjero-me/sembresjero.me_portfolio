@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 interface LanguageProps {
   id: number;
@@ -7,25 +7,21 @@ interface LanguageProps {
 }
 
 const Language: React.FC<LanguageProps> = ({ id, title, level }) => {
-  let paddingClass = "";
-  let borderClasses = "";
+  let paddingClass = '';
+  let borderClasses = '';
   if (id === 1) {
-    paddingClass = "pb-3";
-    borderClasses = "border-b-2 border-accent/70";
+    paddingClass = 'pb-3';
+    borderClasses = 'border-b-2 border-accent/70';
   } else if (id === 3) {
-    paddingClass = "pt-3";
+    paddingClass = 'pt-3';
   } else {
-    paddingClass = "py-3";
-    borderClasses = "border-b-2 border-accent/70";
+    paddingClass = 'py-3';
+    borderClasses = 'border-b-2 border-accent/70';
   }
   return (
     <>
-      <div
-        className={`w-full flex ${paddingClass} items-center ${borderClasses} `}
-      >
-        <p className="grow">
-          {title}
-        </p>
+      <div className={`flex w-full ${paddingClass} items-center ${borderClasses} `}>
+        <p className="grow">{title}</p>
         <p>{level}</p>
       </div>
     </>
