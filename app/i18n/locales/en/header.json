@@ -1,8 +1,12 @@
 {
-  "header-menu-first-item": "Projects",
-  "header-menu-first-item-hover": "~ \b Projects",
-  "header-menu-second-item": "About",
-  "header-menu-second-item-hover": "~ \b About",
-  "header-menu-third-item": "Contact",
-  "header-custom-text": "Available right now \b \b ~ \b \b  Toulon, France / Worldwide"
+  "header-menu-home-item": "Home",
+  "header-menu-home-item-active": "~ \b Home",
+  "header-menu-projects-item": "Projects",
+  "header-menu-projects-item-active": "~ \b Projects",
+  "header-menu-about-item": "About",
+  "header-menu-about-item-active": "~ \b About",
+  "header-menu-contact-item": "Contact",
+  "header-menu-contact-item-active": "~ \b Contact",
+  "header-availability-text": "Available right now",
+  "header-location-text": "Toulon, France / Worldwide"
 }

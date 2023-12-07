@@ -12,7 +12,8 @@ const Projects: React.FC<ProjectsProps> = ({ lng }) => {
 
   return (
     <>
-      <div className="h-screen">
+      <div className="mt-[calc(100px)] h-full lg:mt-0 lg:h-screen">
+        <h1 className="mb-8 block text-6xl text-secondary lg:hidden">Projects</h1>
         <div className="flex h-full items-center">
           <div className="grid h-fit w-full grid-cols-1 items-center justify-items-center gap-4 lg:grid-cols-2">
             <Project

@@ -28,7 +28,7 @@ const App: React.FC<AppProps> = ({ children, lng }) => {
             alt="Jérôme Sembres Portfolio - Typo"
             width={30}
             height={123}
-            className="fixed bottom-8 left-8"
+            className="fixed bottom-8 left-8 hidden lg:block"
           />
           <Container>{children}</Container>
           <Footer lng={lng} />
