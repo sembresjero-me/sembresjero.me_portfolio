@@ -20,9 +20,17 @@ const Language: React.FC<LanguageProps> = ({ id, title, level }) => {
   }
   return (
     <>
-      <div className={`flex w-full ${paddingClass} items-center ${borderClasses} `}>
-        <p className="grow">{title}</p>
-        <p>{level}</p>
+      <div
+        className={`flex w-full flex-col gap-2 sm:hidden ${paddingClass} items-stretch justify-items-center ${borderClasses} `}
+      >
+        <p>{title}</p>
+        <p className="italic">{level}</p>
+      </div>
+      <div
+        className={`hidden w-full flex-row gap-8 sm:flex ${paddingClass} items-center justify-items-stretch ${borderClasses} `}
+      >
+        <p className="grow justify-self-start">{title}</p>
+        <p className="justify-self-end italic">{level}</p>
       </div>
     </>
   );

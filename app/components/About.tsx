@@ -29,15 +29,17 @@ const About: React.FC<AboutProps> = ({ lng }) => {
 
   return (
     <>
-      <div className="mt-[calc(100px)] h-full xl:h-screen">
+      <div className="mt-[calc(100px)] h-full lg:mt-0 xl:h-screen">
         <div className="flex h-full w-full items-center">
-          <div className="grid h-full w-full grid-cols-12 grid-rows-2 items-center justify-items-center gap-4 xl:h-[70vh]">
+          <div className="grid h-full w-full grid-cols-12 items-center justify-items-center gap-4 xl:h-[70vh]">
             <div className="col-span-12 h-full w-full rounded-lg border border-secondary bg-card p-8 shadow-custom shadow-primary xl:col-span-8">
               <div className="flex h-full w-full flex-col items-center">
-                <h2 className="w-full text-xl 2xl:text-3xl">{t('work-experiences-title')}</h2>
                 <div className="flex h-full w-full grow flex-col">
                   <div className="flex h-full w-full flex-col items-stretch">
-                    <div className="flex h-full w-full grow flex-col">
+                    <h2 className="w-full text-xl sm:text-2xl 2xl:text-3xl">
+                      {t('work-experiences-title')}
+                    </h2>
+                    <div className="mb-4 flex h-full w-full grow flex-col">
                       <WorkExperience
                         id={1}
                         title={t('work-experiences-first-item-title')}
@@ -63,17 +65,17 @@ const About: React.FC<AboutProps> = ({ lng }) => {
                         location={t('work-experiences-fourth-item-location')}
                       />
                     </div>
-                    <p className="self-end">{t('work-experiences-asterisk')}</p>
+                    <p className="self-start sm:self-end">{t('work-experiences-asterisk')}</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-span-6 h-full w-full rounded-lg border border-secondary bg-card p-8 xl:col-span-4">
-              <div className="flex h-full w-full flex-col items-center">
-                <h2 className="w-full text-xl 2xl:text-3xl">{t('skills-title')}</h2>
+            <div className="col-span-12 h-full w-full rounded-lg border border-secondary bg-card p-8 shadow-custom shadow-primary lg:col-span-6 xl:col-span-4">
+              <div className="flex h-full w-full flex-col">
+                <h2 className="w-full text-xl sm:text-2xl 2xl:text-3xl">{t('skills-title')}</h2>
                 <div className="flex h-full w-full grow flex-col">
                   <div className="flex h-full w-full flex-col items-stretch">
-                    <div className="flex h-full w-full grow flex-col">
+                    <div className="mb-4 flex h-full w-full grow flex-col">
                       <Skill
                         id={1}
                         title={t('skills-first-item')}
@@ -104,7 +106,7 @@ const About: React.FC<AboutProps> = ({ lng }) => {
                       <DialogTrigger asChild>
                         <Button
                           variant="text"
-                          className="self-end justify-self-end"
+                          className="self-start sm:self-end"
                           onClick={() => {
                             router.push('/about');
                           }}
@@ -136,14 +138,14 @@ const About: React.FC<AboutProps> = ({ lng }) => {
                 </div>
               </div>
             </div>
-            <div className="col-span-6 h-full w-full rounded-lg border border-secondary bg-card p-8 shadow-custom shadow-primary xl:col-span-4">
+            <div className="col-span-12 h-full w-full rounded-lg border border-secondary bg-card p-8 shadow-custom shadow-primary lg:col-span-6 xl:col-span-4">
               <div className="flex h-full w-full flex-col">
-                <h2 className="w-full self-start justify-self-start text-xl 2xl:text-3xl">
+                <h2 className="w-full self-start justify-self-start text-xl sm:text-2xl 2xl:text-3xl">
                   {t('languages-title')}
                 </h2>
                 <div className="flex h-full w-full grow flex-col">
                   <div className="flex h-full w-full flex-col items-stretch">
-                    <div className="flex h-full w-full grow flex-col">
+                    <div className="mb-4 flex h-full w-full grow flex-col">
                       <Language
                         id={1}
                         title={t('languages-first-item-title')}
@@ -162,7 +164,7 @@ const About: React.FC<AboutProps> = ({ lng }) => {
                     </div>
                     <Button
                       variant="text"
-                      className="self-end justify-self-end"
+                      className="self-start sm:self-end"
                       onClick={() => {
                         router.push('/about');
                       }}
@@ -178,10 +180,10 @@ const About: React.FC<AboutProps> = ({ lng }) => {
                 <div className="flex h-full w-full flex-col items-stretch">
                   <div className="flex h-full w-full grow flex-col">
                     <div className="flex h-full w-full flex-col items-center">
-                      <h2 className="w-full text-xl 2xl:text-3xl">
+                      <h2 className="w-full text-xl sm:text-2xl 2xl:text-3xl">
                         {t('educations-certifications-title')}
                       </h2>
-                      <div className="flex h-full w-full grow flex-col">
+                      <div className="mb-4 flex h-full w-full grow flex-col">
                         <EducationCertification
                           id={1}
                           title={t('educations-certifications-first-item-title')}
@@ -207,7 +209,9 @@ const About: React.FC<AboutProps> = ({ lng }) => {
                           location={t('educations-certifications-fourth-item-location')}
                         />
                       </div>
-                      <p className="self-end">{t('educations-certifications-asterisk')}</p>
+                      <p className="self-start sm:self-end">
+                        {t('educations-certifications-asterisk')}
+                      </p>
                     </div>
                   </div>
                 </div>

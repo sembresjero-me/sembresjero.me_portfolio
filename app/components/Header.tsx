@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                   }, 500);
                 }}
               />
-              <div className="hidden items-center space-x-12 lg:flex">
+              <div className="hidden items-center space-x-12 xl:flex">
                 <a
                   onClick={() => {
                     if (pathname === `/${lng}`) {
@@ -169,7 +169,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                 </Popover>
               </div>
             </div>
-            <div className="hidden justify-self-end lg:flex">
+            <div className="hidden justify-self-end xl:flex">
               <p className="text-secondary">{t('header-availability-text')}</p>
               <p className="mx-4 text-secondary">~</p>
               <p className="text-secondary">{t('header-location-text')}</p>
@@ -182,10 +182,10 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
               onClick={() => {
                 setIsMobileMenuOpen(true);
               }}
-              className="block justify-self-end lg:hidden"
+              className="block justify-self-end xl:hidden"
             />
             {isMobileMenuOpen && (
-              <div className="fixed left-0 top-0 z-[200] h-screen w-full bg-card lg:hidden">
+              <div className="fixed left-0 top-0 z-[200] h-screen w-full bg-card xl:hidden">
                 <div className="flex h-full w-full flex-col gap-8">
                   <div className="grid h-[70px] w-full grid-cols-2 items-center justify-items-stretch p-4">
                     <Image

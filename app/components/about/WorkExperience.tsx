@@ -22,11 +22,20 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({ id, title, date, locati
   return (
     <>
       <div
-        className={`grid w-full grid-cols-12 gap-4 ${paddingClass} items-center justify-items-stretch ${borderClasses} `}
+        className={`flex w-full flex-col gap-2 sm:hidden ${paddingClass} items-stretch justify-items-center ${borderClasses} `}
       >
-        <p className="col-span-6 grow justify-self-start">{title}</p>
-        <p className="col-span-2 justify-self-center italic">{date}</p>
-        <p className="col-span-4 justify-self-end">{location}</p>
+        <p>{title}</p>
+        <p className="italic">
+          {date} ~ {location}
+        </p>
+      </div>
+      <div
+        className={`hidden w-full flex-row gap-8 sm:flex ${paddingClass} items-center justify-items-stretch ${borderClasses} `}
+      >
+        <p className="grow justify-self-start">
+          {title} @ {location}
+        </p>
+        <p className="justify-self-end italic">{date}</p>
       </div>
     </>
   );
