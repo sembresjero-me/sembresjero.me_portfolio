@@ -17,10 +17,10 @@ const LegalNotice: React.FC<LegalNoticeProps> = ({ lng }) => {
 
   return (
     <>
-      <div className="my-32 w-full rounded-lg border border-secondary bg-card p-12 shadow-custom shadow-primary">
-        <h2 className="w-full text-xl 2xl:text-3xl">{t('legal-notice-page-title')}</h2>
+      <div className="my-24 w-full rounded-lg border border-secondary bg-card p-12 shadow-custom shadow-primary xl:my-0">
+        <h2 className="mb-8 w-full text-3xl">{t('legal-notice-page-title')}</h2>
         <div className="mb-8">
-          <h3 className="mb-2 w-full text-xl 2xl:text-2xl">{t('legal-notice-owner-title')}</h3>
+          <h3 className="mb-2 w-full text-2xl">{t('legal-notice-owner-title')}</h3>
           <h4>{t('legal-notice-owner-name')}</h4>
           <p>{t('legal-notice-owner-address')}</p>
           <p>{t('legal-notice-owner-number')}</p>
@@ -28,29 +28,25 @@ const LegalNotice: React.FC<LegalNoticeProps> = ({ lng }) => {
           <p>{t('legal-notice-owner-contact')}</p>
         </div>
         <div className="mb-8">
-          <h3 className="mb-2 w-full text-xl 2xl:text-2xl">{t('legal-notice-hoster-title')}</h3>
+          <h3 className="mb-2 w-full text-2xl">{t('legal-notice-hoster-title')}</h3>
           <h4>{t('legal-notice-hoster-name')}</h4>
           <p>{t('legal-notice-hoster-address')}</p>
           <p>{t('legal-notice-hoster-contact')}</p>
         </div>
         <div className="mb-8">
-          <h3 className="mb-2 w-full text-xl 2xl:text-2xl">
-            {t('legal-notice-website-usage-title')}
-          </h3>
+          <h3 className="mb-2 w-full text-2xl">{t('legal-notice-website-usage-title')}</h3>
           <p className="whitespace-pre-line">{t('legal-notice-website-usage-description')}</p>
         </div>
         <div className="mb-8">
-          <h3 className="mb-2 w-full text-xl 2xl:text-2xl">
-            {t('legal-notice-responsibilities-title')}
-          </h3>
+          <h3 className="mb-2 w-full text-2xl">{t('legal-notice-responsibilities-title')}</h3>
           <p className="whitespace-pre-line">{t('legal-notice-responsibilities-description')}</p>
         </div>
         <div className="mb-8">
-          <h3 className="mb-2 w-full text-xl 2xl:text-2xl">{t('legal-notice-copyrights-title')}</h3>
+          <h3 className="mb-2 w-full text-2xl">{t('legal-notice-copyrights-title')}</h3>
           <p className="whitespace-pre-line">{t('legal-notice-copyrights-description')}</p>
         </div>
         <div>
-          <h3 className="mb-2 w-full text-xl 2xl:text-2xl">{t('legal-notice-complaints-title')}</h3>
+          <h3 className="mb-2 w-full text-2xl">{t('legal-notice-complaints-title')}</h3>
           <p className="whitespace-pre-line">{t('legal-notice-complaints-description')}</p>
         </div>
       </div>

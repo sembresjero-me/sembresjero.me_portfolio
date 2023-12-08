@@ -3,7 +3,8 @@
 import { Popover, PopoverContent, PopoverTrigger } from '@/app/components/ui/popover';
 import { usePageTransition } from '@/app/hooks/usePageTransition';
 
-import { useState } from 'react';
+import { useClickAway } from 'react-use';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
@@ -20,11 +21,15 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
   const pathname = usePathname();
   const router = useRouter();
   const { count, setCount } = usePageTransition();
+  const ref = useRef(null);
+  useClickAway(ref, () => {
+    setIsContactActive(false);
+  });
 
   return (
     <>
       <header className="absolute top-0 z-50 h-[70px] w-full lg:fixed">
-        <nav className="h-full w-full p-4">
+        <nav className="h-full w-full px-4 py-4 md:px-8 xl:px-12">
           <div className="grid grid-cols-2 items-center justify-items-stretch">
             <div className="flex items-center space-x-12 justify-self-start">
               <Image
@@ -114,6 +119,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                       onClick={() => {
                         router.push('mailto:bonjour@sembresjero.me');
                       }}
+                      ref={ref}
                     >
                       <p className="me-2">bonjour@sembresjero.me</p>
                       <img
@@ -187,7 +193,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
             {isMobileMenuOpen && (
               <div className="fixed left-0 top-0 z-[200] h-screen w-full bg-card xl:hidden">
                 <div className="flex h-full w-full flex-col gap-8">
-                  <div className="grid h-[70px] w-full grid-cols-2 items-center justify-items-stretch p-4">
+                  <div className="grid h-[70px] w-full grid-cols-2 items-center justify-items-stretch px-4 py-4 sm:px-8 lg:px-12">
                     <Image
                       src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/sembresjero-me-logo.gif"
                       alt="Jérôme Sembres Portfolio - Logo"
@@ -206,7 +212,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                       className="justify-self-end"
                     />
                   </div>
-                  <div className="flex h-full w-full grow flex-col px-4">
+                  <div className="flex h-full w-full grow flex-col px-4 sm:px-8 lg:px-12">
                     <a
                       className="mb-4 text-4xl text-primary"
                       onClick={() => {
@@ -335,7 +341,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                       </div>
                     )}
                   </div>
-                  <div className="flex flex-col gap-2 px-4 pb-4">
+                  <div className="flex flex-col gap-2 px-4 pb-4 sm:px-8 lg:px-12">
                     <p className="text-2xl text-primary">{t('header-availability-text')}</p>
                     <p className="mb-0 text-2xl leading-none text-primary">
                       {t('header-location-text')}
@@ -346,7 +352,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                     alt="Jérôme Sembres Portfolio - Typo"
                     width={30}
                     height={123}
-                    className="fixed bottom-5 right-4 z-[251] lg:hidden"
+                    className="fixed bottom-4 right-4 z-[251] sm:right-8 lg:right-12 xl:hidden"
                   />
                 </div>
               </div>

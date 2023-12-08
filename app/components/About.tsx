@@ -1,21 +1,14 @@
 'use client';
 
 import { Button } from '@/app/components/ui/button';
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/app/components/ui/dialog';
 import EducationCertification from '@/app/components/about/EducationCertification';
 import Language from '@/app/components/about/Language';
 import Skill from '@/app/components/about/Skill';
 import SkillsPopupContent from '@/app/components/skills/SkillsPopupContent';
 import WorkExperience from '@/app/components/about/WorkExperience';
 
+import { useClickAway } from 'react-use';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from '@/app/i18n/client';
 
@@ -26,10 +19,18 @@ interface AboutProps {
 const About: React.FC<AboutProps> = ({ lng }) => {
   const { t } = useTranslation(lng, 'about');
   const router = useRouter();
+  const [isSkillsPopupOpen, setIsSkillsPopupOpen] = useState<boolean>(false);
+  const ref = useRef(null);
+
+  useClickAway(ref, () => {
+    setIsSkillsPopupOpen(false);
+  });
 
   return (
     <>
-      <div className="mt-[calc(100px)] h-full lg:mt-0 xl:h-screen">
+      <div className="my-24 h-full xl:my-0 xl:h-screen">
+        <h1 className="mb-4 block text-6xl text-secondary xl:hidden">{t('about-page-title')}</h1>
+        <p className="mb-8 block text-secondary xl:hidden">{t('about-page-description')}</p>
         <div className="flex h-full w-full items-center">
           <div className="grid h-full w-full grid-cols-12 items-center justify-items-center gap-4 xl:h-[70vh]">
             <div className="col-span-12 h-full w-full rounded-lg border border-secondary bg-card p-8 shadow-custom shadow-primary xl:col-span-8">
@@ -102,38 +103,51 @@ const About: React.FC<AboutProps> = ({ lng }) => {
                         imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-express-js.svg"
                       />
                     </div>
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button
-                          variant="text"
-                          className="self-start sm:self-end"
-                          onClick={() => {
-                            router.push('/about');
-                          }}
-                        >
-                          {t('skills-button')}
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent>
-                        <DialogHeader>
-                          <DialogTitle>Skills</DialogTitle>
-                        </DialogHeader>
-                        <SkillsPopupContent lng={lng} />
-                        <DialogFooter className="justify-end">
-                          <DialogClose asChild>
-                            <Button
-                              variant="text"
-                              className="self-end justify-self-end"
-                              onClick={() => {
-                                router.push('/about');
-                              }}
+                    <Button
+                      variant="text"
+                      className="self-start sm:self-end"
+                      onClick={() => {
+                        setIsSkillsPopupOpen(true);
+                      }}
+                    >
+                      {t('skills-button')}
+                    </Button>
+                    {isSkillsPopupOpen && (
+                      <>
+                        <div className="fixed left-0 top-0 z-[500] h-screen w-full backdrop-blur">
+                          <div className="mx-auto flex h-full w-full max-w-screen-2xl items-center px-4 md:px-8 xl:px-12">
+                            <div
+                              ref={ref}
+                              className="flex h-[70vh] w-full flex-col overflow-auto rounded-lg bg-card p-8 shadow-custom shadow-secondary"
                             >
-                              {t('languages-button')}
-                            </Button>
-                          </DialogClose>
-                        </DialogFooter>
-                      </DialogContent>
-                    </Dialog>
+                              <div className="mb-4 flex w-full justify-items-stretch">
+                                <h2 className="mb-0 w-full grow justify-self-start text-3xl">
+                                  {t('skills-title')}
+                                </h2>
+                                <p
+                                  className="mb-0 justify-self-end"
+                                  onClick={() => {
+                                    setIsSkillsPopupOpen(false);
+                                  }}
+                                >
+                                  x
+                                </p>
+                              </div>
+                              <SkillsPopupContent lng={lng} />
+                              <Button
+                                variant="text"
+                                className="mt-8 self-end justify-self-end"
+                                onClick={() => {
+                                  router.push('/about');
+                                }}
+                              >
+                                {t('languages-button')}
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>

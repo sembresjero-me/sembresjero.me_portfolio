@@ -86,20 +86,20 @@
   h2,
   h3 {
     font-family: var(--custom-font-nohemi);
-    font-weight: theme("fontWeight.medium");
+    font-weight: theme('fontWeight.medium');
     color: hsl(var(--primary));
-    margin-bottom: theme("margin.4");
+    margin-bottom: theme('margin.4');
   }
 
   h4 {
     font-family: var(--custom-font-nohemi);
     color: hsl(var(--primary));
-    margin-bottom: theme("margin.2");
+    margin-bottom: theme('margin.2');
   }
 
   h5 {
     font-family: var(--custom-font-instrument_serif);
-    margin-right: theme("margin.2");
+    margin-right: theme('margin.2');
   }
 
   a {
@@ -111,27 +111,30 @@
     color: hsl(var(--primary));
     background-color: hsl(var(--background));
     font-family: var(--custom-font-instrument_serif);
-    font-size: theme("fontSize.xl");
+    font-size: theme('fontSize.xl');
   }
-  
+
   .slide-in {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: hsl(var(--accent));
-    z-index: 100;
+    z-index: 502;
   }
-  
+
   .slide-out {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     background-color: hsl(var(--accent));
-    z-index: 100;
+    z-index: 502;
   }
 
-  /* ... */
+  @media not all and (min-width: 768px) {
+    body {
+      font-size: theme('fontSize.lg');
+    }
+  }
 }
-

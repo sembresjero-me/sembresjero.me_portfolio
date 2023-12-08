@@ -1,26 +1,13 @@
-"use client";
+'use client';
 
 interface ContainerProps {
   children: React.ReactNode;
 }
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
-
   return (
     <>
-      <div
-        className="
-      max-w-screen-2xl
-      h-full
-        mx-auto
-        xl:px-16 
-        md:px-12
-        sm:px-8
-        px-4
-      "
-      >
-        {children}
-      </div>
+      <div className="mx-auto h-full max-w-screen-2xl px-4 md:px-8 xl:px-12">{children}</div>
     </>
   );
 };
