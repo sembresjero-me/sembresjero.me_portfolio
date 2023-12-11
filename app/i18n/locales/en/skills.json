@@ -1,5 +1,5 @@
 {
-  "skills-web-development-title": "Web Development Skills",
+  "skills-web-development-title": "Web Development",
   "skills-web-development-front-end-title": "Front-end",
   "skills-web-development-front-end-first-item": "React",
   "skills-web-development-front-end-second-item": "Next.js",
@@ -14,10 +14,10 @@
   "skills-web-development-cms-second-item": "Shopify",
   "skills-web-development-cms-third-item": "Webflow",
   "skills-web-development-cms-fourth-item": "PrestaShop",
-  "skills-others-title": "Others skills",
+  "skills-others-title": "Others Skills",
   "skills-others-marketing-title": "Marketing",
   "skills-others-marketing-first-item": "SEO",
-  "skills-others-marketing-second-item": "Inbound & Outbound Strategies",
+  "skills-others-marketing-second-item": "Inbound & Outbound Acquisition Strategies",
   "skills-others-marketing-third-item": "E-mailing Campaigns",
   "skills-others-marketing-fourth-item": "Data Scraping",
   "skills-others-marketing-fifth-item": "Process Automation",
@@ -33,5 +33,5 @@
   "skills-soft-third-item": "Adaptability",
   "skills-soft-fourth-item": "Creativity",
   "skills-soft-fifth-item": "Initiative",
-  "languages-button": "Download My Resume •"
+  "languages-button": "~ Download my resume"
 }

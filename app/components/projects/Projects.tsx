@@ -12,7 +12,7 @@ const Projects: React.FC<ProjectsProps> = ({ lng }) => {
 
   return (
     <>
-      <div className="my-[calc(100px)] h-full xl:my-0 xl:h-screen">
+      <div className="mb-8 mt-24 h-full xl:mb-0 xl:mt-0 xl:h-screen">
         <h1 className="mb-4 block text-6xl text-secondary xl:hidden">{t('projects-page-title')}</h1>
         <p className="mb-8 block text-secondary xl:hidden">{t('projects-page-description')}</p>
         <div className="flex h-full items-center">

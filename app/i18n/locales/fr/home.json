@@ -1,10 +1,17 @@
 {
+  "intro-block-title": "Oui,\n\nJérôme,\n\nc\u2019est moi.",
+  "intro-block-button": "~ ♫♫♫",
   "presentation-block-title": "Je suis un développeur web fullstack, avec une préférence pour le front-end, actuellement freelance dans le sud-est de la France.",
-  "presentation-block-button": "À propos de moi",
+  "presentation-block-button": "~ À propos de moi",
   "stack-block-title": "Stack",
+  "stack-block-button": "~ Voir plus",
+  "stack-first-item": "React",
+  "stack-second-item": "Next.js",
+  "stack-third-item": "Tailwind",
+  "stack-fourth-item": "MongoDB",
+  "stack-fifth-item": "Express.js",
   "music-block-title": "On repeat",
   "last-project-block-title": "Mon dernier projet",
-  "last-project-block-button": "En voir plus",
+  "last-project-block-button": "~ Voir plus",
   "last-project-title": "GUESS THE SNEAKERS"
-  }
-  
+}

@@ -55,10 +55,7 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
               <a
                 onClick={() => {
                   if (pathname.includes('/legal-notice')) {
-                    setCount(count + 1);
-                    setTimeout(() => {
-                      router.push('#');
-                    }, 500);
+                    router.push('#');
                   } else {
                     setCount(count + 1);
                     setTimeout(() => {
@@ -74,10 +71,7 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
               <a
                 onClick={() => {
                   if (pathname.includes('/privacy-policy')) {
-                    setCount(count + 1);
-                    setTimeout(() => {
-                      router.push('#');
-                    }, 500);
+                    router.push('#');
                   } else {
                     setCount(count + 1);
                     setTimeout(() => {

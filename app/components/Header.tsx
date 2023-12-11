@@ -64,10 +64,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                 <a
                   onClick={() => {
                     if (pathname.includes('/projects')) {
-                      setCount(count + 1);
-                      setTimeout(() => {
-                        router.push('#');
-                      }, 500);
+                      router.push('#');
                     } else {
                       setCount(count + 1);
                       setTimeout(() => {
@@ -83,10 +80,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                 <a
                   onClick={() => {
                     if (pathname.includes('/about')) {
-                      setCount(count + 1);
-                      setTimeout(() => {
-                        router.push('#');
-                      }, 500);
+                      router.push('#');
                     } else {
                       setCount(count + 1);
                       setTimeout(() => {
@@ -234,10 +228,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                       className="mb-4 text-4xl text-primary"
                       onClick={() => {
                         if (pathname.includes('/projects')) {
-                          setCount(count + 1);
-                          setTimeout(() => {
-                            router.push('#');
-                          }, 500);
+                          router.push('#');
                         } else {
                           setCount(count + 1);
                           setTimeout(() => {
@@ -254,10 +245,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                       className="mb-4 text-4xl text-primary"
                       onClick={() => {
                         if (pathname.includes('/about')) {
-                          setCount(count + 1);
-                          setTimeout(() => {
-                            router.push('#');
-                          }, 500);
+                          router.push('#');
                         } else {
                           setCount(count + 1);
                           setTimeout(() => {

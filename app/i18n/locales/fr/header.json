@@ -1,6 +1,12 @@
 {
-  "first-menu-item": "Accueil",
-  "second-menu-item": "Projets",
-  "third-menu-item": "À Propos",
-  "button-text": "Discutons!"
+  "header-menu-home-item": "Accueil",
+  "header-menu-home-item-active": "~ \b Accueil",
+  "header-menu-projects-item": "Projets",
+  "header-menu-projects-item-active": "~ \b Projets",
+  "header-menu-about-item": "À Propos",
+  "header-menu-about-item-active": "~ \b À Propos",
+  "header-menu-contact-item": "Contact",
+  "header-menu-contact-item-active": "~ \b Contact",
+  "header-availability-text": "Disponible dès maintenant",
+  "header-location-text": "PACA / Remote"
 }
