@@ -20,48 +20,8 @@ const instrumentSerif = Instrument_Serif({
 const nohemi = localFont({
   src: [
     {
-      path: '../../public/assets/fonts/Nohemi-Thin.woff2',
-      weight: '100',
-      style: 'normal',
-    },
-    {
-      path: '../../public/assets/fonts/Nohemi-ExtraLight.woff2',
-      weight: '200',
-      style: 'normal',
-    },
-    {
-      path: '../../public/assets/fonts/Nohemi-Light.woff2',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../../public/assets/fonts/Nohemi-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
       path: '../../public/assets/fonts/Nohemi-Medium.woff2',
       weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../../public/assets/fonts/Nohemi-SemiBold.woff2',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../../public/assets/fonts/Nohemi-Bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: '../../public/assets/fonts/Nohemi-ExtraBold.woff2',
-      weight: '800',
-      style: 'normal',
-    },
-    {
-      path: '../../public/assets/fonts/Nohemi-Black.woff2',
-      weight: '900',
       style: 'normal',
     },
   ],
@@ -79,13 +39,6 @@ export const metadata: Metadata = {
   generator: 'Next.js',
   referrer: 'origin-when-cross-origin',
   metadataBase: new URL('https://www.sembresjero.me'),
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-GB': '/en',
-      'fr-FR': '/fr',
-    },
-  },
   formatDetection: {
     email: false,
     address: false,

@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   let metaTitle: string;
   let metaDescription: string;
   let metaApplicationName: string;
-  let ogUrl: string;
+  let pageUrl: string;
   let ogSitename: string;
   let ogImageUrl: string;
   let ogImageAlt: string;
@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   // read route params
   const language = params.lng;
+  const pageSlug: string = 'projects';
 
   // fetch data
 
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metaDescription =
       "Through my 7+ years working in the digital world, i've worked on many different projects. Here is some of the recents & bests ones i've worked on, don't be shy and take a look at those!";
     metaApplicationName = seoVariables.en.metaApplicationName;
-    ogUrl = '/en/projects';
+    pageUrl = `/en/${pageSlug}`;
     ogSitename = seoVariables.en.ogSitename;
     ogImageUrl = seoVariables.en.ogImageUrl;
     ogImageAlt = seoVariables.en.ogImageAlt;
@@ -38,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metaDescription =
       "Au cours de mes 7 années de travail dans le monde du digital, j’ai travaillé sur de nombreux projets très différents. Voici quelques-uns des plus récents et des meilleurs sur lesquels j’ai pu travailler, n'hésitez pas à y jetez un coup d'oeil!";
     metaApplicationName = seoVariables.fr.metaApplicationName;
-    ogUrl = '/fr/projects';
+    pageUrl = `/fr/${pageSlug}`;
     ogSitename = seoVariables.fr.ogSitename;
     ogImageUrl = seoVariables.fr.ogImageUrl;
     ogImageAlt = seoVariables.fr.ogImageAlt;
@@ -50,12 +51,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: metaDescription,
     applicationName: metaApplicationName,
     alternates: {
-      canonical: ogUrl,
+      canonical: pageUrl,
+      languages: {
+        'en-AU': `/en/${pageSlug}`,
+        'en-CA': `/en/${pageSlug}`,
+        'en-GB': `/en/${pageSlug}`,
+        'en-NZ': `/en/${pageSlug}`,
+        'en-US': `/en/${pageSlug}`,
+        'en-ZA': `/en/${pageSlug}`,
+        'fr-BE': `/fr/${pageSlug}`,
+        'fr-CA': `/fr/${pageSlug}`,
+        'fr-CH': `/fr/${pageSlug}`,
+        'fr-FR': `/fr/${pageSlug}`,
+        'fr-LU': `/fr/${pageSlug}`,
+      },
     },
     openGraph: {
       title: metaTitle,
       description: metaDescription,
-      url: ogUrl,
+      url: pageUrl,
       siteName: ogSitename,
       images: [
         {

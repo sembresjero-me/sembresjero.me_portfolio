@@ -11,7 +11,7 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ lng }) => {
 
   return (
     <>
-      <div className="my-24 w-full rounded-lg border border-secondary bg-card p-12 shadow-custom shadow-primary">
+      <div className="mb-8 mt-24 w-full rounded-lg border border-secondary bg-card p-12 shadow-custom shadow-primary xl:mb-0 xl:mt-0">
         <div className="mb-8">
           <h2 className="text-3xl">{t('privacy-policy-page-title')}</h2>
           <p className="whitespace-pre-line">{t('privacy-policy-page-intro')}</p>

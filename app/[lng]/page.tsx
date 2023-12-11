@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   let metaTitle: string;
   let metaDescription: string;
   let metaApplicationName: string;
-  let ogUrl: string;
+  let pageUrl: string;
   let ogSitename: string;
   let ogImageUrl: string;
   let ogImageAlt: string;
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metaDescription =
       "From classic showcase websites to fully custom software or mobile app, i'll help you conquer the web with my Fullstack Web Developer skills. Everything's possible so let's talk! ";
     metaApplicationName = seoVariables.en.metaApplicationName;
-    ogUrl = '/en';
+    pageUrl = '/en';
     ogSitename = seoVariables.en.ogSitename;
     ogImageUrl = seoVariables.en.ogImageUrl;
     ogImageAlt = seoVariables.en.ogImageAlt;
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metaDescription =
       "Que ce soit pour un site web vitrine classique, un logiciel sur-mesure ou bien une application mobile, je mettrai mes compétences de développeur web fullstack au service de votre projet, n'hésitez pas à venir m'en parler!";
     metaApplicationName = seoVariables.fr.metaApplicationName;
-    ogUrl = '/fr';
+    pageUrl = '/fr';
     ogSitename = seoVariables.fr.ogSitename;
     ogImageUrl = seoVariables.fr.ogImageUrl;
     ogImageAlt = seoVariables.fr.ogImageAlt;
@@ -50,12 +50,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: metaDescription,
     applicationName: metaApplicationName,
     alternates: {
-      canonical: ogUrl,
+      canonical: pageUrl,
+      languages: {
+        'en-AU': `/en`,
+        'en-CA': `/en`,
+        'en-GB': `/en`,
+        'en-NZ': `/en`,
+        'en-US': `/en`,
+        'en-ZA': `/en`,
+        'fr-BE': `/fr`,
+        'fr-CA': `/fr`,
+        'fr-CH': `/fr`,
+        'fr-FR': `/fr`,
+        'fr-LU': `/fr`,
+      },
     },
     openGraph: {
       title: metaTitle,
       description: metaDescription,
-      url: ogUrl,
+      url: pageUrl,
       siteName: ogSitename,
       images: [
         {
