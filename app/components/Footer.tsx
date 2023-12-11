@@ -6,6 +6,8 @@ import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import { useParams } from 'next/navigation';
 import { useTranslation } from '@/app/i18n/client';
+import Image from 'next/image';
+import dayjs from 'dayjs';
 
 interface FooterProps {
   lng: any;
@@ -34,10 +36,22 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
 
   return (
     <>
-      <footer className="fixed bottom-0 z-50 hidden h-[70px] w-full xl:block">
-        <nav className="h-full w-full p-4">
-          <div className="flex items-center justify-end">
-            <div className="flex items-center space-x-12">
+      <footer className="z-50 block w-full xl:fixed xl:bottom-0">
+        <Image
+          src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/sembresjero-me-logo-typo-light.svg"
+          alt="Jérôme Sembres Portfolio - Typo"
+          width={30}
+          height={123}
+          className="3xl:bottom-5 3xl:left-12 3xl:rotate-0 fixed -bottom-6 left-24 z-[51] hidden rotate-90 xl:block"
+        />
+        <nav className="h-full w-full px-4 py-4 md:px-8 xl:px-12">
+          <div className="grid w-full grid-cols-1 items-center justify-items-stretch gap-4 md:grid-cols-2 xl:grid-cols-1">
+            <div className="block justify-self-start xl:hidden">
+              <p className="text-secondary">
+                {dayjs().format('YYYY')} {t('footer-menu-copyrights-text')}
+              </p>
+            </div>
+            <div className="3xl:flex-col 3xl:space-y-2 3xl:space-x-0 3xl:items-end flex items-center space-x-12 justify-self-start md:justify-self-end">
               <a
                 onClick={() => {
                   if (pathname.includes('/legal-notice')) {

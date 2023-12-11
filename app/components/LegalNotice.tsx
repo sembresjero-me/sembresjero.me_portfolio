@@ -17,7 +17,7 @@ const LegalNotice: React.FC<LegalNoticeProps> = ({ lng }) => {
 
   return (
     <>
-      <div className="my-24 w-full rounded-lg border border-secondary bg-card p-12 shadow-custom shadow-primary xl:my-0">
+      <div className="my-24 w-full rounded-lg border border-secondary bg-card p-12 shadow-custom shadow-primary">
         <h2 className="mb-8 w-full text-3xl">{t('legal-notice-page-title')}</h2>
         <div className="mb-8">
           <h3 className="mb-2 w-full text-2xl">{t('legal-notice-owner-title')}</h3>

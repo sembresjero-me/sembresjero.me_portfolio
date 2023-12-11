@@ -28,11 +28,11 @@ const About: React.FC<AboutProps> = ({ lng }) => {
 
   return (
     <>
-      <div className="my-24 h-full xl:my-0 xl:h-screen">
+      <div className="mb-8 mt-24 h-full xl:mb-0 xl:mt-0 xl:h-screen">
         <h1 className="mb-4 block text-6xl text-secondary xl:hidden">{t('about-page-title')}</h1>
         <p className="mb-8 block text-secondary xl:hidden">{t('about-page-description')}</p>
         <div className="flex h-full w-full items-center">
-          <div className="grid h-full w-full grid-cols-12 items-center justify-items-center gap-4 xl:h-[70vh]">
+          <div className="grid h-fit w-full grid-cols-12 items-center justify-items-center gap-4">
             <div className="col-span-12 h-full w-full rounded-lg border border-secondary bg-card p-8 shadow-custom shadow-primary xl:col-span-8">
               <div className="flex h-full w-full flex-col items-center">
                 <div className="flex h-full w-full grow flex-col">

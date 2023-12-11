@@ -23,13 +23,6 @@ const App: React.FC<AppProps> = ({ children, lng }) => {
       <AnimatePresence mode="wait" initial={false}>
         <motion.div key={count}>
           <Header lng={lng} />
-          <Image
-            src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/sembresjero-me-logo-typo-light.svg"
-            alt="Jérôme Sembres Portfolio - Typo"
-            width={30}
-            height={123}
-            className="fixed bottom-5 left-4 z-[51] hidden xl:block"
-          />
           <Container>{children}</Container>
           <Footer lng={lng} />
           <motion.div
@@ -45,7 +38,7 @@ const App: React.FC<AppProps> = ({ children, lng }) => {
             transition={{
               duration: 0.5,
               ease: [0.4, 0.8, 0.4, 0.8],
-              delay: 0.75,
+              delay: 0.5,
             }}
           ></motion.div>
         </motion.div>
