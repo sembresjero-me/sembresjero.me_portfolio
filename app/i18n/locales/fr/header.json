@@ -1,12 +1,12 @@
 {
   "header-menu-home-item": "Accueil",
-  "header-menu-home-item-active": "~ \b Accueil",
+  "header-menu-home-item-active": "~ Accueil",
   "header-menu-projects-item": "Projets",
-  "header-menu-projects-item-active": "~ \b Projets",
+  "header-menu-projects-item-active": "~ Projets",
   "header-menu-about-item": "À Propos",
-  "header-menu-about-item-active": "~ \b À Propos",
+  "header-menu-about-item-active": "~ À Propos",
   "header-menu-contact-item": "Contact",
-  "header-menu-contact-item-active": "~ \b Contact",
+  "header-menu-contact-item-active": "~ Contact",
   "header-availability-text": "Disponible dès maintenant",
   "header-location-text": "PACA / Remote"
 }

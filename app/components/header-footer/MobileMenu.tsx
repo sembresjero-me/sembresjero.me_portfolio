@@ -29,7 +29,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ lng }) => {
 
   return (
     <>
-      <div className="fixed left-0 top-0 z-[200] h-screen w-full bg-card xl:hidden">
+      <div className="fixed left-0 top-0 z-[200] h-[100svh] w-full bg-card xl:hidden">
         <div className="flex h-full w-full flex-col gap-8">
           <div className="grid h-[70px] w-full grid-cols-2 items-center justify-items-stretch px-4 py-4 sm:px-8 lg:px-12">
             <Image
@@ -80,6 +80,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ lng }) => {
                   isContactActive ? setIsContactActive(false) : setIsContactActive(true);
                 }
               }}
+              ref={ref}
             >
               {t('header-menu-contact-item')}
             </a>

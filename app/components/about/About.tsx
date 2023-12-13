@@ -37,9 +37,7 @@ const About: React.FC<AboutProps> = ({ lng }) => {
               <div className="flex h-full w-full flex-col items-center">
                 <div className="flex h-full w-full grow flex-col">
                   <div className="flex h-full w-full flex-col items-stretch">
-                    <h2 className="w-full text-xl sm:text-2xl 2xl:text-3xl">
-                      {t('work-experiences-title')}
-                    </h2>
+                    <h2 className="w-full text-2xl 2xl:text-3xl">{t('work-experiences-title')}</h2>
                     <div className="mb-4 flex h-full w-full grow flex-col">
                       <WorkExperience
                         id={1}
@@ -73,7 +71,7 @@ const About: React.FC<AboutProps> = ({ lng }) => {
             </div>
             <div className="col-span-12 h-full w-full rounded-lg border border-secondary bg-card p-8 shadow-custom shadow-primary lg:col-span-6 xl:col-span-4">
               <div className="flex h-full w-full flex-col">
-                <h2 className="w-full text-xl sm:text-2xl 2xl:text-3xl">{t('skills-title')}</h2>
+                <h2 className="w-full text-2xl 2xl:text-3xl">{t('skills-title')}</h2>
                 <div className="flex h-full w-full grow flex-col">
                   <div className="flex h-full w-full flex-col items-stretch">
                     <div className="mb-4 flex h-full w-full grow flex-col">
@@ -149,7 +147,7 @@ const About: React.FC<AboutProps> = ({ lng }) => {
             </div>
             <div className="col-span-12 h-full w-full rounded-lg border border-secondary bg-card p-8 shadow-custom shadow-primary lg:col-span-6 xl:col-span-4">
               <div className="flex h-full w-full flex-col">
-                <h2 className="w-full self-start justify-self-start text-xl sm:text-2xl 2xl:text-3xl">
+                <h2 className="w-full self-start justify-self-start text-2xl 2xl:text-3xl">
                   {t('languages-title')}
                 </h2>
                 <div className="flex h-full w-full grow flex-col">
@@ -189,7 +187,7 @@ const About: React.FC<AboutProps> = ({ lng }) => {
                 <div className="flex h-full w-full flex-col items-stretch">
                   <div className="flex h-full w-full grow flex-col">
                     <div className="flex h-full w-full flex-col items-center">
-                      <h2 className="w-full text-xl sm:text-2xl 2xl:text-3xl">
+                      <h2 className="w-full text-2xl 2xl:text-3xl">
                         {t('educations-certifications-title')}
                       </h2>
                       <div className="mb-4 flex h-full w-full grow flex-col">
