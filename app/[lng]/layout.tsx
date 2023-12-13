@@ -1,6 +1,6 @@
 import { dir } from 'i18next';
 import { languages } from '@/app/i18n/settings';
-import ClientOnly from '@/app/components/ClientOnly';
+import ClientOnly from '@/app/components/various/ClientOnly';
 import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 import { Instrument_Serif } from 'next/font/google';
@@ -57,7 +57,7 @@ export default async function RootLayout({
     <html lang={lng} dir={dir(lng)}>
       <body className={`${instrumentSerif.variable} ${nohemi.variable} `}>
         <ClientOnly>
-          <App lng={lng} children={children} />
+          <App lng={lng}>{children}</App>
         </ClientOnly>
       </body>
     </html>

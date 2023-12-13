@@ -1,4 +1,4 @@
-import PrivacyPolicy from '@/app/components/PrivacyPolicy';
+import PrivacyPolicy from '@/app/components/legal/PrivacyPolicy';
 
 import { Metadata } from 'next';
 import { seoVariables } from '@/lib/utils';

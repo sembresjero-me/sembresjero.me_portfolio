@@ -1,9 +1,10 @@
 {
   "skills-web-development-title": "Développement Web",
   "skills-web-development-front-end-title": "Front-end",
-  "skills-web-development-front-end-first-item": "React",
-  "skills-web-development-front-end-second-item": "Next.js",
-  "skills-web-development-front-end-third-item": "Tailwind",
+  "skills-web-development-front-end-first-item": "HTML / CSS / JS",
+  "skills-web-development-front-end-second-item": "React",
+  "skills-web-development-front-end-third-item": "Next.js",
+  "skills-web-development-front-end-fourth-item": "Tailwind",
   "skills-web-development-back-end-title": "Back-end",
   "skills-web-development-back-end-first-item": "MongoDB",
   "skills-web-development-back-end-second-item": "Express.js",

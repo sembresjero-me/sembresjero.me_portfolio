@@ -1,4 +1,4 @@
-import LegalNotice from '@/app/components/LegalNotice';
+import LegalNotice from '@/app/components/legal/LegalNotice';
 
 import { Metadata } from 'next';
 import { seoVariables } from '@/lib/utils';

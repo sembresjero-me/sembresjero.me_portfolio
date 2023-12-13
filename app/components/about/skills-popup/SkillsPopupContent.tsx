@@ -2,7 +2,7 @@
 
 import { useTranslation } from '@/app/i18n/client';
 
-import WebDevelopmentSkill from '@/app/components/skills/WebDevelopmentSkill';
+import WebDevelopmentSkill from '@/app/components/about/skills-popup/WebDevelopmentSkill';
 
 interface SkillsProps {
   lng: any;

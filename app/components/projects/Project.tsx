@@ -1,33 +1,41 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 interface ProjectProps {
   title: string;
   description: string;
+  link?: string;
   imageLink: string;
   videoLink: string;
 }
 
-const Project: React.FC<ProjectProps> = ({ title, description, imageLink, videoLink }) => {
+const Project: React.FC<ProjectProps> = ({ title, description, link, imageLink, videoLink }) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const router = useRouter();
 
   return (
     <>
       <div
         key={title}
-        className="bg-cream relative aspect-[3/2] w-full rounded-lg"
+        className="relative aspect-[3/2] w-full rounded-lg bg-card hover:cursor-pointer"
         onMouseEnter={() => {
           setIsHovered(true);
         }}
         onMouseLeave={() => {
           setIsHovered(false);
         }}
+        onClick={() => {
+          router.push(link ? link : '#');
+        }}
       >
-        <img
+        <Image
           src={imageLink}
-          className={`absolute h-full w-full rounded-lg object-cover transition`}
+          className="absolute h-full w-full rounded-lg object-cover transition"
           alt={`Jérôme Sembres portfolio - ${title} project`}
+          fill={true}
         />
         <video
           preload="auto"

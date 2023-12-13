@@ -26,18 +26,21 @@ const Projects: React.FC<ProjectsProps> = ({ lng }) => {
             <Project
               title={t('second-project-title')}
               description={t('second-project-description')}
+              link="https://www.guessthesneakers.com"
               imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/projets/guessthesneakers/sembresjero-me-cover-projet-guessthesneakers.webp"
               videoLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/projets/guessthesneakers/sembresjero-me-video-projet-guessthesneakers.mp4"
             />
             <Project
               title={t('fourth-project-title')}
               description={t('fourth-project-description')}
+              link="https://www.zartfilmsproduction.com"
               imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/projets/zartfilmsproduction/sembresjero-me-cover-projet-zartfilmsproduction.webp"
               videoLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/projets/zartfilmsproduction/sembresjero-me-video-projet-zartfilmsproduction.mp4"
             />
             <Project
               title={t('third-project-title')}
               description={t('third-project-description')}
+              link="https://kotag.co"
               imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/projets/kotag/sembresjero-me-cover-projet-kotag.webp"
               videoLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/projets/kotag/sembresjero-me-video-projet-kotag.mp4"
             />

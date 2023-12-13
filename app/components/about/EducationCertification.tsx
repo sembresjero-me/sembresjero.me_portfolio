@@ -16,12 +16,12 @@ const EducationCertification: React.FC<EducationCertificationProps> = ({
   let paddingClass = '';
   let borderClasses = '';
   if (id === 1) {
-    paddingClass = 'pb-3';
+    paddingClass = 'pb-2';
     borderClasses = 'border-b-2 border-accent/70';
   } else if (id === 4) {
-    paddingClass = 'pt-3';
+    paddingClass = 'pt-2';
   } else {
-    paddingClass = 'py-3';
+    paddingClass = 'py-2';
     borderClasses = 'border-b-2 border-accent/70';
   }
   return (

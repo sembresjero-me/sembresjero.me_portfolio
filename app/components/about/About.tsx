@@ -3,8 +3,8 @@
 import { Button } from '@/app/components/ui/button';
 import EducationCertification from '@/app/components/about/EducationCertification';
 import Language from '@/app/components/about/Language';
-import Skill from '@/app/components/about/Skill';
-import SkillsPopupContent from '@/app/components/skills/SkillsPopupContent';
+import Skill from '@/app/components/various/StackSkill';
+import SkillsPopupContent from '@/app/components/about/skills-popup/SkillsPopupContent';
 import WorkExperience from '@/app/components/about/WorkExperience';
 
 import { useClickAway } from 'react-use';
@@ -32,7 +32,7 @@ const About: React.FC<AboutProps> = ({ lng }) => {
         <h1 className="mb-4 block text-6xl text-secondary xl:hidden">{t('about-page-title')}</h1>
         <p className="mb-8 block text-secondary xl:hidden">{t('about-page-description')}</p>
         <div className="flex h-full w-full items-center">
-          <div className="grid h-fit w-full grid-cols-12 items-center justify-items-center gap-4">
+          <div className="grid h-fit w-full auto-rows-max grid-cols-12 grid-rows-4 items-center justify-items-center gap-4 lg:grid-rows-3 xl:grid-rows-2">
             <div className="col-span-12 h-full w-full rounded-lg border border-secondary bg-card p-8 shadow-custom shadow-primary xl:col-span-8">
               <div className="flex h-full w-full flex-col items-center">
                 <div className="flex h-full w-full grow flex-col">
@@ -85,21 +85,16 @@ const About: React.FC<AboutProps> = ({ lng }) => {
                       <Skill
                         id={2}
                         title={t('skills-second-item')}
-                        imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-next-js.svg"
+                        imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-tailwind.svg"
                       />
                       <Skill
                         id={3}
                         title={t('skills-third-item')}
-                        imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-tailwind.svg"
+                        imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-mongodb.svg"
                       />
                       <Skill
                         id={4}
                         title={t('skills-fourth-item')}
-                        imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-mongodb.svg"
-                      />
-                      <Skill
-                        id={5}
-                        title={t('skills-fifth-item')}
                         imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-express-js.svg"
                       />
                     </div>

@@ -1,5 +1,21 @@
 {
-  "footer-menu-first-item": "Legal Notice",
-  "footer-menu-second-item": "Privacy Policy",
-  "footer-menu-third-item": "Contact"
+  "legal-notice-page-title": "Mentions Légales",
+  "legal-notice-owner-title": "Propriétaire & éditeur du site",
+  "legal-notice-owner-name": "EI – JEROME SEMBRES",
+  "legal-notice-owner-address": "Allée Jules Muraire, 83260 La Crau, France",
+  "legal-notice-owner-number": "SIRET : 82085930400017",
+  "legal-notice-owner-code": "Code APE : Programmation informatique (6201Z)",
+  "legal-notice-owner-contact": "bonjour[at]sembresjero.me",
+  "legal-notice-hoster-title": "Hébergeur du site",
+  "legal-notice-hoster-name": "VERCEL INC.",
+  "legal-notice-hoster-address": "340 S Lemon Ave #4133 Walnut, CA 91789",
+  "legal-notice-hoster-contact": "privacy[at]vercel.com",
+  "legal-notice-website-usage-title": "Utilisation du site",
+  "legal-notice-website-usage-description": "Ce site est accessible à l'URL suivante : www.sembresjero.me et est exploité conformément aux lois de Monaco et de l'Europe. L'utilisation de ce site est régie par les présentes conditions d'utilisation. En utilisant ce site, vous reconnaissez avoir lu et accepté ces conditions. Elles peuvent être modifiées sans préavis. Le propriétaire ne saurait être tenu pour responsable en aucune manière d'une mauvaise utilisation du service.",
+  "legal-notice-responsibilities-title": "Responsibilités",
+  "legal-notice-responsibilities-description": "Les informations figurant sur ce site ne sont pas contractuelles et ne peuvent engager la responsabilité du Propriétaire qui reste libre de corriger, modifier, enrichir ou supprimer tout ou partie du contenu de son site. Le Propriétaire ne donne aucune garantie quant à l'exactitude ou la fiabilité de ces informations ou contenus et, en particulier, n'assume aucune responsabilité pour toute erreur ou omission dans les informations ou contenus de ce site web ou pour tout dommage ou préjudice que vous pourriez subir suite à l'utilisation de ces informations ou contenus.Si vous constatez une lacune, une erreur ou ce qui semble être un dysfonctionnement, merci de le signaler par email à bonjour[at]sembresjero.me.\nTout contenu téléchargé l'est aux risques et périls de l'utilisateur et sous sa seule responsabilité. En conséquence, le Propriétaire ne saurait être tenu responsable d'un quelconque dommage subi par l'ordinateur de l'utilisateur ou d'une quelconque perte de données consécutives au téléchargement. Les liens hypertextes mis en place dans le cadre du présent site web en direction d'autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité du Propriétaire.",
+  "legal-notice-copyrights-title": "Copyrights",
+  "legal-notice-copyrights-description": "Le site www.sembresjero.me et tous les éléments qui le composent sont protégés par des droits de propriété intellectuelle et des droits voisins réservés exclusivement aux titulaires de ces droits. En conséquence, toute utilisation, reproduction, représentation ou diffusion partielle ou totale de ces éléments est strictement interdite. Le Propriétaire décline toute responsabilité en cas d'utilisation ou d'exploitation illégale des éléments de ce site (photos, textes, présentations, mise en page, charte graphique, marques, dessins et autres signes distinctifs, etc.)",
+  "legal-notice-complaints-title": "Réclamations",
+  "legal-notice-complaints-description": "Pour toutes vos demandes, veuillez contacter le Propriétaire d'une manière ou d'une autre en utilisant les informations de contact indiquées dans le paragraphe 'Propriétaire & éditeur du site'."
 }

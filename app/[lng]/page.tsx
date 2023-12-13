@@ -1,4 +1,4 @@
-import Bento from '@/app/components/Bento';
+import Bento from '@/app/components/bento/Bento';
 
 import { Metadata } from 'next';
 import { seoVariables } from '@/lib/utils';

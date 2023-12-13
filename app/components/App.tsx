@@ -1,12 +1,12 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
+import { Toaster } from '@/app/components/ui/toaster';
 
 import { usePageTransition } from '@/app/hooks/usePageTransition';
-import Container from '@/app/components/Container';
-import Footer from '@/app/components/Footer';
-import Header from '@/app/components/Header';
+import Container from '@/app/components/various/Container';
+import Footer from '@/app/components/header-footer/Footer';
+import Header from '@/app/components/header-footer/Header';
 
 import '@/app/globals.css';
 
@@ -43,6 +43,7 @@ const App: React.FC<AppProps> = ({ children, lng }) => {
           ></motion.div>
         </motion.div>
       </AnimatePresence>
+      <Toaster />
     </>
   );
 };
