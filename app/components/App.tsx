@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Toaster } from '@/app/components/ui/toaster';
 
 import { usePageTransition } from '@/app/hooks/usePageTransition';
+import { usePathname } from 'next/navigation';
 import Container from '@/app/components/various/Container';
 import Footer from '@/app/components/header-footer/Footer';
 import Header from '@/app/components/header-footer/Header';
@@ -17,11 +18,12 @@ interface AppProps {
 
 const App: React.FC<AppProps> = ({ children, lng }) => {
   const { count } = usePageTransition();
+  const pathname = usePathname();
 
   return (
     <>
       <AnimatePresence mode="wait" initial={false}>
-        <motion.div key={count}>
+        <motion.div key={pathname}>
           <Header lng={lng} />
           <Container>{children}</Container>
           <Footer lng={lng} />
