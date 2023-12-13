@@ -44,9 +44,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                 height={35}
                 onClick={() => {
                   setCount(count + 1);
-                  setTimeout(() => {
-                    router.push(`/${lng}`);
-                  }, 500);
+                  router.push(`/${lng}`);
                 }}
               />
               <div className="hidden items-center space-x-12 xl:flex">

@@ -27,10 +27,8 @@ const MenuItem: React.FC<MenuItemProps> = ({ type, path, title, activeTitle }) =
             router.push('#');
           } else {
             setCount(count + 1);
-            setTimeout(() => {
-              isMobileMenuOpen && setIsMobileMenuOpen(false);
-              router.push(path);
-            }, 500);
+            isMobileMenuOpen && setIsMobileMenuOpen(false);
+            router.push(path);
           }
         }}
       >
