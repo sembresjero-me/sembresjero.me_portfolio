@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslation } from '@/app/i18n/client';
+import { useTranslation } from '@/app/i18n';
 
 import WebDevelopmentSkill from '@/app/components/about/skills-popup/WebDevelopmentSkill';
 

@@ -6,7 +6,7 @@ import { usePageTransition } from '@/app/hooks/usePageTransition';
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useTranslation } from '@/app/i18n/client';
+import { useTranslation } from '@/app/i18n';
 
 interface BentoProps {
   lng: any;

@@ -10,7 +10,7 @@ import { useClickAway } from 'react-use';
 import { useRef } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useTranslation } from '@/app/i18n/client';
+import { useTranslation } from '@/app/i18n';
 
 interface MobileMenuProps {
   lng: any;

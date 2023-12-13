@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import { useParams } from 'next/navigation';
-import { useTranslation } from '@/app/i18n/client';
+import { useTranslation } from '@/app/i18n';
 import { ToastAction } from '@/app/components/ui/toast';
 import { useToast } from '@/app/components/ui/use-toast';
 import Image from 'next/image';
@@ -44,7 +44,7 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
           alt="Jérôme Sembres Portfolio - Logo Typo Light"
           width={30}
           height={123}
-          className="3xl:bottom-5 3xl:left-12 3xl:rotate-0 fixed -bottom-6 left-24 z-[51] hidden rotate-90 xl:block"
+          className="fixed -bottom-6 left-24 z-[51] hidden rotate-90 xl:block 3xl:bottom-5 3xl:left-12 3xl:rotate-0"
         />
         <nav className="h-full w-full px-4 py-4 md:px-8 xl:px-12">
           <div className="grid w-full grid-cols-1 items-center justify-items-stretch gap-4 md:grid-cols-2 xl:grid-cols-1">
@@ -53,7 +53,7 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
                 {dayjs().format('YYYY')} {t('footer-menu-copyrights-text')}
               </p>
             </div>
-            <div className="3xl:flex-col 3xl:space-y-2 3xl:space-x-0 3xl:items-end flex items-center space-x-12 justify-self-start md:justify-self-end">
+            <div className="flex items-center space-x-12 justify-self-start md:justify-self-end 3xl:flex-col 3xl:items-end 3xl:space-x-0 3xl:space-y-2">
               <MenuItem
                 path={`/${lng}/legal-notice`}
                 title={t('footer-menu-legal-notice-item')}

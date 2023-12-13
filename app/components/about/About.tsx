@@ -10,7 +10,7 @@ import WorkExperience from '@/app/components/about/WorkExperience';
 import { useClickAway } from 'react-use';
 import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { useTranslation } from '@/app/i18n/client';
+import { useTranslation } from '@/app/i18n';
 
 interface AboutProps {
   lng: any;
