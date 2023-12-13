@@ -29,9 +29,11 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
     setIsContactActive(false);
   });
 
+  console.log('is contact active:', isContactActive);
+
   return (
     <>
-      <header className="absolute top-0 z-50 h-[70px] w-full lg:fixed">
+      <header className="absolute top-0 z-50 h-[70px] w-full xl:fixed">
         <nav className="h-full w-full px-4 py-4 md:px-8 xl:px-12">
           <div className="grid grid-cols-2 items-center justify-items-stretch">
             <div className="flex items-center space-x-12 justify-self-start">
@@ -70,6 +72,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                         isContactActive ? setIsContactActive(false) : setIsContactActive(true);
                       }
                     }}
+                    ref={ref}
                   >
                     <a href="#">
                       {isContactActive

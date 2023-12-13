@@ -2,8 +2,8 @@ import { dir } from 'i18next';
 import { languages } from '@/app/i18n/settings';
 import ClientOnly from '@/app/components/various/ClientOnly';
 import localFont from 'next/font/local';
-import type { Metadata } from 'next';
 import { Instrument_Serif } from 'next/font/google';
+import type { Metadata } from 'next';
 import '@/app/globals.css';
 import App from '@/app/components/App';
 

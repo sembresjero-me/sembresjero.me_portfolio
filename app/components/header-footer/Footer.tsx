@@ -53,36 +53,54 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
                 {dayjs().format('YYYY')} {t('footer-menu-copyrights-text')}
               </p>
             </div>
-            <div className="flex items-center space-x-12 justify-self-start md:justify-self-end 3xl:flex-col 3xl:items-end 3xl:space-x-0 3xl:space-y-2">
-              <MenuItem
-                path={`/${lng}/legal-notice`}
-                title={t('footer-menu-legal-notice-item')}
-                activeTitle={t('footer-menu-legal-notice-item-active')}
-              />
-              <MenuItem
-                path={`/${lng}/privacy-policy`}
-                title={t('footer-menu-privacy-policy-item')}
-                activeTitle={t('footer-menu-privacy-policy-item-active')}
-              />
+            <div className="flex items-center space-x-12 justify-self-start md:justify-self-end">
+              <div
+                className="text-secondary hover:cursor-pointer"
+                onClick={() => {
+                  router.push(
+                    'https://open.spotify.com/playlist/37i9dQZF1Fa1IIVtEpGUcU?si=453ecf421a144a79',
+                  );
+                }}
+              >
+                <span className="me-2 animate-pulse text-sm">♫</span>Currently on repeat
+              </div>
               <a
                 onClick={() => {
                   if (pathname.includes('/en')) {
-                    toast({
-                      title: 'Langue modifiée!',
-                      description: 'Vous êtes maintenant sur la version française du site.',
-                      action: <ToastAction altText="Annuler">Annuler</ToastAction>,
-                    });
+                    router.push(frenchUrl);
                     setTimeout(() => {
-                      router.push(frenchUrl);
+                      toast({
+                        title: 'Langue modifiée!',
+                        description: 'Vous êtes maintenant sur la version française du site.',
+                        action: (
+                          <ToastAction
+                            altText="Annuler"
+                            onClick={() => {
+                              router.push(englishUrl);
+                            }}
+                          >
+                            Annuler
+                          </ToastAction>
+                        ),
+                      });
                     }, 250);
                   } else {
-                    toast({
-                      title: 'Language changed!',
-                      description: "You're now on the english version on this website.",
-                      action: <ToastAction altText="Undo">Undo</ToastAction>,
-                    });
+                    router.push(englishUrl);
                     setTimeout(() => {
-                      router.push(englishUrl);
+                      toast({
+                        title: 'Language changed!',
+                        description: "You're now on the english version on this website.",
+                        action: (
+                          <ToastAction
+                            altText="Undo"
+                            onClick={() => {
+                              router.push(frenchUrl);
+                            }}
+                          >
+                            Undo
+                          </ToastAction>
+                        ),
+                      });
                     }, 250);
                   }
                 }}
