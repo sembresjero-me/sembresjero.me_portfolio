@@ -49,9 +49,7 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                   className="self-end justify-self-end"
                   onClick={() => {
                     setCount(count + 1);
-                    setTimeout(() => {
-                      router.push(`/${lng}/about`);
-                    }, 500);
+                    router.push(`/${lng}/about`);
                   }}
                 >
                   {t('presentation-block-button')}
@@ -69,9 +67,7 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                     className="mb-2 justify-self-end 2xl:mb-4"
                     onClick={() => {
                       setCount(count + 1);
-                      setTimeout(() => {
-                        router.push(`/${lng}/about`);
-                      }, 500);
+                      router.push(`/${lng}/about`);
                     }}
                   >
                     {t('front-end-stack-block-button')}
@@ -112,9 +108,7 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                     className="mb-2 justify-self-end 2xl:mb-4"
                     onClick={() => {
                       setCount(count + 1);
-                      setTimeout(() => {
-                        router.push(`/${lng}/projects`);
-                      }, 500);
+                      router.push(`/${lng}/projects`);
                     }}
                   >
                     {t('last-project-block-button')}
@@ -151,9 +145,7 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                     className="mb-2 justify-self-end 2xl:mb-4"
                     onClick={() => {
                       setCount(count + 1);
-                      setTimeout(() => {
-                        router.push(`/${lng}/about`);
-                      }, 500);
+                      router.push(`/${lng}/about`);
                     }}
                   >
                     {t('back-end-stack-block-button')}

@@ -39,10 +39,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ lng }) => {
               height={35}
               onClick={() => {
                 setCount(count + 1);
-                setTimeout(() => {
-                  isMobileMenuOpen && setIsMobileMenuOpen(false);
-                  router.push(`/${lng}`);
-                }, 500);
+                isMobileMenuOpen && setIsMobileMenuOpen(false);
+                router.push(`/${lng}`);
               }}
             />
             <Image
