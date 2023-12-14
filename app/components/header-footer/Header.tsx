@@ -3,13 +3,12 @@
 import { Popover, PopoverContent, PopoverTrigger } from '@/app/components/ui/popover';
 import { usePageTransition } from '@/app/hooks/usePageTransition';
 import { useIsMobileMenuOpen } from '@/app/hooks/useIsMobileMenuOpen';
-import { useIsContactActive } from '@/app/hooks/useIsContactActive';
 import ContactItem from '@/app/components/header-footer/ContactItem';
 import MobileMenu from '@/app/components/header-footer/MobileMenu';
 import MenuItem from '@/app/components/header-footer/MenuItem';
 
 import { useClickAway } from 'react-use';
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from '@/app/i18n';
@@ -23,13 +22,11 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
   const router = useRouter();
   const { count, setCount } = usePageTransition();
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useIsMobileMenuOpen();
-  const { isContactActive, setIsContactActive } = useIsContactActive();
+  const [isContactActive, setIsContactActive] = useState<boolean>(false);
   const ref = useRef(null);
   useClickAway(ref, () => {
     setIsContactActive(false);
   });
-
-  console.log('is contact active:', isContactActive);
 
   return (
     <>
@@ -66,9 +63,7 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                 <Popover>
                   <PopoverTrigger
                     onClick={() => {
-                      {
-                        isContactActive ? setIsContactActive(false) : setIsContactActive(true);
-                      }
+                      setIsContactActive((prevValue: boolean) => !prevValue);
                     }}
                     ref={ref}
                   >

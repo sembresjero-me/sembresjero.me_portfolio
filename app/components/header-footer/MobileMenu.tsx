@@ -2,12 +2,11 @@
 
 import ContactItem from '@/app/components/header-footer/ContactItem';
 import { usePageTransition } from '@/app/hooks/usePageTransition';
-import { useIsMobileMenuOpen } from '@/app/hooks/useIsMobileMenuOpen';
-import { useIsContactActive } from '@/app/hooks/useIsContactActive';
 import MenuItem from '@/app/components/header-footer/MenuItem';
+import { useIsMobileMenuOpen } from '@/app/hooks/useIsMobileMenuOpen';
 
 import { useClickAway } from 'react-use';
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from '@/app/i18n';
@@ -21,7 +20,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ lng }) => {
   const router = useRouter();
   const { count, setCount } = usePageTransition();
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useIsMobileMenuOpen();
-  const { isContactActive, setIsContactActive } = useIsContactActive();
+  const [isContactActive, setIsContactActive] = useState<boolean>(false);
   const ref = useRef(null);
   useClickAway(ref, () => {
     setIsContactActive(false);
@@ -31,7 +30,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ lng }) => {
     <>
       <div className="fixed left-0 top-0 z-[200] h-[100svh] w-full bg-card xl:hidden">
         <div className="flex h-full w-full flex-col gap-8">
-          <div className="grid h-[70px] w-full grid-cols-2 items-center justify-items-stretch px-4 py-4 sm:px-8 lg:px-12">
+          <div className="grid h-[70px] w-full grid-cols-2 items-center justify-items-stretch px-4 py-4 md:px-8">
             <Image
               src="https://s3.eu-west-3.amazonaws.com/sembresjero.me/sembresjero-me-gif-logo-dark.gif"
               alt="Jérôme Sembres Portfolio - Logo"
@@ -49,12 +48,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ lng }) => {
               width={20}
               height={20}
               onClick={() => {
+                console.log('coucou');
                 setIsMobileMenuOpen(false);
               }}
               className="justify-self-end"
             />
           </div>
-          <div className="flex h-full w-full grow flex-col px-4 sm:px-8 lg:px-12">
+          <div className="flex h-full w-full grow flex-col px-4 md:px-8">
             <MenuItem
               type="mobile"
               path={`/${lng}`}
@@ -76,13 +76,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ lng }) => {
             <a
               className="mb-4 text-4xl text-primary sm:text-5xl"
               onClick={() => {
-                {
-                  isContactActive ? setIsContactActive(false) : setIsContactActive(true);
-                }
+                setIsContactActive((prevValue: boolean) => !prevValue);
               }}
               ref={ref}
             >
-              {t('header-menu-contact-item')}
+              {isContactActive
+                ? t('header-menu-contact-item-active')
+                : t('header-menu-contact-item')}
             </a>
             {isContactActive && (
               <div className="transition-transform">
@@ -121,7 +121,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ lng }) => {
               </div>
             )}
           </div>
-          <div className="flex flex-col gap-2 px-4 pb-4 sm:px-8 lg:px-12">
+          <div className="flex flex-col gap-2 px-4 pb-4 md:px-8">
             <p className="text-2xl text-primary">{t('header-availability-text')}</p>
             <p className="mb-0 text-2xl leading-none text-primary">{t('header-location-text')}</p>
           </div>
