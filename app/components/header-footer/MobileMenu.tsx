@@ -74,7 +74,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ lng }) => {
               title={t('header-menu-about-item')}
             />
             <a
-              className="mb-4 text-4xl text-primary sm:text-5xl md:text-6xl"
+              className="mb-4 text-4xl text-primary sm:text-5xl"
               onClick={() => {
                 {
                   isContactActive ? setIsContactActive(false) : setIsContactActive(true);
@@ -105,10 +105,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ lng }) => {
                 <ContactItem
                   id={3}
                   type="mobile"
-                  name="Instagram"
-                  title="@sembresjero.me"
-                  link="https://www.instagram.com/sembresjero.me/"
-                  imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/contact/sembresjero-me-contact-logo-instagram.svg"
+                  name="GitHub"
+                  title="@sembresjero-me"
+                  link="https://www.github.com/sembresjero-me"
+                  imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/contact/sembresjero-me-contact-logo-github.svg"
                 />
                 <ContactItem
                   id={4}

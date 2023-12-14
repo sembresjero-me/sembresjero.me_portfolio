@@ -62,7 +62,8 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
                   );
                 }}
               >
-                <span className="me-2 animate-pulse text-sm">♫</span>Currently on repeat
+                <span className="me-2 animate-pulse text-sm">♫</span>
+                {t('footer-menu-playlist-item')}
               </div>
               <a
                 onClick={() => {

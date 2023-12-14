@@ -95,10 +95,10 @@ const Header: React.FC<HeaderProps> = ({ lng }) => {
                     />
                     <ContactItem
                       id={3}
-                      name="Instagram"
-                      title="@sembresjero.me"
-                      link="https://www.instagram.com/sembresjero.me/"
-                      imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/contact/sembresjero-me-contact-logo-instagram.svg"
+                      name="GitHub"
+                      title="@sembresjero-me"
+                      link="https://www.github.com/sembresjero-me"
+                      imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/contact/sembresjero-me-contact-logo-github.svg"
                     />
                     <ContactItem
                       id={4}
