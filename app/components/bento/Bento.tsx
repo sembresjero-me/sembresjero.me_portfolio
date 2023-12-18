@@ -77,7 +77,7 @@ const Bento: React.FC<BentoProps> = ({ lng }) => {
                   <Skill
                     id={1}
                     title={t('front-end-stack-block-first-item')}
-                    imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-react.svg"
+                    imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-html-css-js.svg"
                   />
                   <Skill
                     id={2}

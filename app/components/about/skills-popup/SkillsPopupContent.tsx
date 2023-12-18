@@ -22,14 +22,18 @@ const Skills: React.FC<SkillsProps> = ({ lng }) => {
             <h4 className="text-xl">{t('skills-web-development-front-end-title')}</h4>
             <WebDevelopmentSkill
               title={t('skills-web-development-front-end-first-item')}
-              imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-react.svg"
+              imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-html-css-js.svg"
             />
             <WebDevelopmentSkill
               title={t('skills-web-development-front-end-second-item')}
-              imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-next-js.svg"
+              imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-react.svg"
             />
             <WebDevelopmentSkill
               title={t('skills-web-development-front-end-third-item')}
+              imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-next-js.svg"
+            />
+            <WebDevelopmentSkill
+              title={t('skills-web-development-front-end-fourth-item')}
               imageLink="https://s3.eu-west-3.amazonaws.com/sembresjero.me/stack/sembresjero-me-stack-logo-tailwind.svg"
             />
           </div>
