@@ -40,7 +40,6 @@ jobs:
       - name: connect and pull
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}
-          cd ..
           cd ${{ secrets.WORK_DIR }}
           docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           docker compose up -d
