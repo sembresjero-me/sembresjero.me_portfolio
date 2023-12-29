@@ -1,13 +1,17 @@
-# build stage
-FROM node:lts-alpine as build
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
+FROM --platform=linux/amd64 node:lts
 
-# production stage
-FROM nginx:stable-alpine as production
-COPY --from=build /app /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+ENV APP_ROOT /app
+ENV PORT 9200
+
+RUN mkdir ${APP_ROOT}
+WORKDIR ${APP_ROOT}
+ADD . ${APP_ROOT}
+
+RUN npm
+RUN npm build
+
+ENV HOST 0.0.0.0
+EXPOSE 8999
+
+#Start main app
+CMD ["npm", "start"]
