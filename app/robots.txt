@@ -1,9 +1,0 @@
-# Config
-User-Agent: *
-Allow: /
-
-# Host
-Host: https://www.sembresjero.me
-
-# Sitemap
-Sitemap: https://www.sembresjero.me/sitemap.xml
