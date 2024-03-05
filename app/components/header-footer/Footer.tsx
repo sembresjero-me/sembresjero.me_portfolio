@@ -54,17 +54,21 @@ const Footer: React.FC<FooterProps> = ({ lng }) => {
               </p>
             </div>
             <div className="flex items-center space-x-12 justify-self-start md:justify-self-end">
-              <div
+              <a className="text-secondary hover:cursor-pointer" href="https://open.spotify.com/playlist/73KD3jhCJvuyGOiq9VabYY?si=72a510473aa4496a" target='_blank'>
+              <span className="me-2 animate-pulse text-sm">♫</span>
+                {t('footer-menu-playlist-item')}
+              </a>
+              {/* <div
                 className="text-secondary hover:cursor-pointer"
                 onClick={() => {
                   router.push(
-                    'https://open.spotify.com/playlist/37i9dQZF1Fa1IIVtEpGUcU?si=453ecf421a144a79',
+                    'https://open.spotify.com/playlist/73KD3jhCJvuyGOiq9VabYY?si=72a510473aa4496a',
                   );
                 }}
               >
                 <span className="me-2 animate-pulse text-sm">♫</span>
                 {t('footer-menu-playlist-item')}
-              </div>
+              </div> */}
               <a
                 onClick={() => {
                   if (pathname.includes('/en')) {
