@@ -73,13 +73,19 @@ services:
         networks:
             - proxy-net
 
-        # Health check
-        healthcheck:
-          test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
-          interval: 30s
-          timeout: 10s
-          retries: 3
-          start_period: 120s
+        # Health check (utilise Node.js car curl n'est pas installé dans Alpine)
+        #healthcheck:
+        #    test:
+        #        [
+        #            "CMD",
+        #            "node",
+        #            "-e",
+        #            "require('http').get('http://localhost:3000/', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})",
+        #        ]
+        #    interval: 30s
+        #    timeout: 10s
+        #    retries: 3
+        #    start_period: 60s
 
         labels:
             - "com.portainer.description=Application Next.js depuis GitHub"
