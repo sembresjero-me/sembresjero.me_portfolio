@@ -26,7 +26,7 @@ version: "3.8"
 
 services:
     # --- Application Next.js ---
-    sembresjero.me_portfolio:
+    sembresjero-me:
         # Build depuis le répertoire courant (cloné par Portainer ou Git)
         build:
             context: .
@@ -34,8 +34,8 @@ services:
             args:
                 NODE_ENV: production
 
-        image: sembresjero.me_portfolio:latest
-        container_name: "sembresjero.me_portfolio"
+        image: sembresjero-me:latest
+        container_name: "sembresjero-me"
         restart: unless-stopped
 
         environment:
@@ -88,7 +88,7 @@ services:
         #    start_period: 60s
 
         labels:
-            - "com.portainer.description=Application Next.js depuis GitHub"
+            - "com.portainer.description=Portfolio de Jérôme Sembres en Next.js depuis GitHub"
             - "com.portainer.backup=false"
 
         # Limites de ressources
