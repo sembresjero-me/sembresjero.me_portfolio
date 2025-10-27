@@ -1,35 +1,138 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ============================================================================
+# GITIGNORE pour Next.js + Docker
+# ============================================================================
+# 
+# Renommez ce fichier en .gitignore à la racine de votre projet
+# 
+# ⚠️ IMPORTANT : Ce fichier protège vos secrets !
+# Ne supprimez JAMAIS les lignes concernant les .env
+#
+# ============================================================================
 
-# dependencies
+# ============================================================================
+# 🔒 FICHIERS SENSIBLES (NE JAMAIS COMMITER)
+# ============================================================================
+
+# Variables d'environnement avec secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+.env*.local
+
+# Fichiers de configuration avec credentials
+config/secrets.json
+config/credentials.json
+
+# ============================================================================
+# Dependencies
+# ============================================================================
+
+node_modules
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
-/coverage
+# ============================================================================
+# Next.js
+# ============================================================================
 
-# next.js
 /.next/
 /out/
+.next
+out
+next-env.d.ts
 
-# production
+# Production
 /build
+/dist
 
-# misc
-.DS_Store
-*.pem
+# ============================================================================
+# Testing
+# ============================================================================
 
-# debug
+/coverage
+*.coverage
+.nyc_output
+
+# ============================================================================
+# Logs
+# ============================================================================
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
 
-# local env files
-.env*.local
+# ============================================================================
+# OS Files
+# ============================================================================
 
-# vercel
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============================================================================
+# IDE / Editor
+# ============================================================================
+
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.history
+
+# JetBrains (WebStorm, IntelliJ, etc.)
+.idea
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# ============================================================================
+# Docker (optionnel, décommentez si vous ne voulez pas versionner)
+# ============================================================================
+
+# Décommentez si vous ne voulez PAS versionner ces fichiers Docker
+# Dockerfile
+# docker-compose.yml
+# .dockerignore
+
+# Mais GARDEZ-LES si vous voulez les partager dans le repo (recommandé)
+
+# ============================================================================
+# Misc
+# ============================================================================
+
+# TypeScript
+*.tsbuildinfo
+
+# Turbo
+.turbo
+
+# Vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Sentry
+.sentryclirc
+

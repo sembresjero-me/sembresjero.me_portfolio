@@ -1,0 +1,112 @@
+# ============================================================================
+# DOCKERIGNORE pour Next.js
+# ============================================================================
+# 
+# Renommez ce fichier en .dockerignore à la racine de votre projet
+# 
+# Ce fichier empêche certains fichiers d'être copiés dans l'image Docker,
+# ce qui réduit la taille de l'image et améliore la sécurité.
+#
+# ============================================================================
+
+# ============================================================================
+# 🔒 FICHIERS SENSIBLES (NE JAMAIS INCLURE DANS L'IMAGE)
+# ============================================================================
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+.env*.local
+
+# Fichiers de configuration locaux
+config/secrets.json
+config/credentials.json
+
+# ============================================================================
+# Git
+# ============================================================================
+
+.git
+.gitignore
+.gitattributes
+.github
+
+# ============================================================================
+# Dependencies (seront réinstallées dans le Dockerfile)
+# ============================================================================
+
+node_modules
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+pnpm-debug.log
+
+# ============================================================================
+# Next.js Build (sera rebuilded dans le Dockerfile)
+# ============================================================================
+
+.next
+out
+build
+dist
+
+# ============================================================================
+# Documentation & Misc
+# ============================================================================
+
+README.md
+CHANGELOG.md
+LICENSE
+*.md
+
+# Tests
+**/*.test.js
+**/*.test.ts
+**/*.test.jsx
+**/*.test.tsx
+**/*.spec.js
+**/*.spec.ts
+__tests__
+__mocks__
+coverage
+.nyc_output
+
+# ============================================================================
+# IDE / Editor
+# ============================================================================
+
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ============================================================================
+# Docker (éviter la récursion)
+# ============================================================================
+
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# ============================================================================
+# CI/CD
+# ============================================================================
+
+.github
+.gitlab-ci.yml
+.circleci
+.travis.yml
+azure-pipelines.yml
+
+# ============================================================================
+# Logs
+# ============================================================================
+
+*.log
+logs
+
